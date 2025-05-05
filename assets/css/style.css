@@ -42,12 +42,7 @@ body {
 }
 
 body {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="%23ff003c" stroke-width="2"/><line x1="16" y1="4" x2="16" y2="12" stroke="%23ff003c" stroke-width="2"/><line x1="16" y1="20" x2="16" y2="28" stroke="%23ff003c" stroke-width="2"/><line x1="4" y1="16" x2="12" y2="16" stroke="%23ff003c" stroke-width="2"/><line x1="20" y1="16" x2="28" y2="16" stroke="%23ff003c" stroke-width="2"/><animate attributeName="opacity" values="1;0.8;1" dur="1.5s" repeatCount="indefinite"/></svg>') 16 16, auto;
-}
-
-/* Click effect - pulsating crosshair */
-body:active {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="%23ff003c" stroke-width="2" stroke-dasharray="5,3"/><circle cx="16" cy="16" r="8" fill="none" stroke="%23ff003c" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="8" stroke="%23ff003c" stroke-width="2"/><line x1="16" y1="24" x2="16" y2="30" stroke="%23ff003c" stroke-width="2"/><line x1="2" y1="16" x2="8" y2="16" stroke="%23ff003c" stroke-width="2"/><line x1="24" y1="16" x2="30" y2="16" stroke="%23ff003c" stroke-width="2"/></svg>') 16 16, auto;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 36"><rect x="0" y="0" width="24" height="36" fill="%230a0a0a" opacity="0.7"/><text x="12" y="8" font-family="monospace" font-size="10" fill="%2320c20e" text-anchor="middle">1010</text><text x="12" y="18" font-family="monospace" font-size="10" fill="%2320c20e" text-anchor="middle">0101</text><text x="12" y="28" font-family="monospace" font-size="10" fill="%2320c20e" text-anchor="middle">1010</text></svg>') 12 18, auto;
 }
 
 .container {
