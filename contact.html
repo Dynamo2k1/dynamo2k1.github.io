@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rana Uzair | Cyber Security Specialist</title>
+    <title>Rana Uzair | Contact</title>
+    <meta name="description" content="Contact Rana Uzair | Cyber Security Specialist">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <canvas id="matrix"></canvas>
+    <div id="particles-js"></div>
     
     <div class="container">
         <header class="cyber-header">
@@ -20,87 +22,111 @@
             <div class="cyber-nav">
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> HOME</a></li>
-                        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
-                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> CERTS</a></li>
-                        <li><a href="contact.html"><i class="fas fa-terminal"></i> CONTACT</a></li>
+                        <li><a href="index.html" class="nav-link"><i class="fas fa-terminal"></i> HOME</a></li>
+                        <li><a href="projects.html" class="nav-link"><i class="fas fa-code"></i> PROJECTS</a></li>
+                        <li><a href="certifications.html" class="nav-link"><i class="fas fa-certificate"></i> CERTS</a></li>
+                        <li><a href="about.html" class="nav-link"><i class="fas fa-user-secret"></i> ABOUT</a></li>
+                        <li><a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <main class="cyber-main">
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3><i class="fas fa-envelope"></i> ENCRYPTED EMAIL</h3>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">YOUR NAME</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">YOUR EMAIL</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">MESSAGE</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="cyber-button">
-                            <i class="fas fa-lock"></i> SEND SECURELY
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="contact-info">
-                    <h3><i class="fas fa-network-wired"></i> CONNECT</h3>
-                    <ul>
-                        <li>
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/dynamo2k1" target="_blank">github.com/dynamo2k1</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:ranauzair370@gmail.com">ranauzair370@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            +92 344 5001600
-                        </li>
-                    </ul>
-                    
-                    <div class="pgp-key">
-                        <h4><i class="fas fa-key"></i> PGP PUBLIC KEY</h4>
-                        <div class="terminal-box">
-                            <div class="terminal-content">
-                                > -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
-                                > Version: GnuPG v2.0.22 (GNU/Linux)<br>
-                                > <br>
-                                > mQENBF4wBkYBCAD...<br>
-                                > -----END PGP PUBLIC KEY BLOCK-----
+            <div class="cyber-card">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-envelope"></i> ENCRYPTED MESSAGE</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">YOUR NAME</label>
+                                <input type="text" id="name" name="name" required>
                             </div>
+                            <div class="form-group">
+                                <label for="email">YOUR EMAIL</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">SUBJECT</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">MESSAGE</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="encrypt" checked>
+                                    Encrypt with PGP
+                                </label>
+                            </div>
+                            <button type="submit" class="cyber-button">
+                                <i class="fas fa-lock"></i> SEND SECURELY
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3><i class="fas fa-network-wired"></i> CONNECT</h3>
+                        <ul>
+                            <li>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/dynamo2k1" target="_blank">github.com/dynamo2k1</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank">linkedin.com/in/rana-uzair</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ranauzair370@gmail.com">ranauzair370@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                +92 344 5001600
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Islamabad, Pakistan
+                            </li>
+                        </ul>
+                        
+                        <div class="pgp-key">
+                            <h4><i class="fas fa-key"></i> PGP PUBLIC KEY</h4>
+                            <div class="terminal-box">
+                                <div class="terminal-header">
+                                    <span>PGP KEY</span>
+                                    <span>Rana Uzair</span>
+                                </div>
+                                <div class="terminal-content">
+                                    > -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+                                    > Version: GnuPG v2.0.22 (GNU/Linux)<br>
+                                    > <br>
+                                    > mQENBF4wBkYBCAD...<br>
+                                    > -----END PGP PUBLIC KEY BLOCK-----
+                                </div>
+                            </div>
+                            <a href="#" class="cyber-button" style="margin-top: 1rem;">
+                                <i class="fas fa-download"></i> Download Public Key
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+
         <footer class="cyber-footer">
             <div class="social-links">
-                <a href="https://github.com/dynamo2k1" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/dynamo2k1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
             <p class="copyright">© 2025 Rana Uzair | All systems operational</p>
         </footer>
     </div>
 
     <script src="assets/js/matrix.js"></script>
-    <script src="assets/js/github.js"></script>
-    <script src="assets/js/terminal.js"></script>
-    <script src="js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
