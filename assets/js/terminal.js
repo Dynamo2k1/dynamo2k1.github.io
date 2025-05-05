@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       lineElement.textContent = lineElement.textContent + text.charAt(index);
       setTimeout(() => typeWriter(text, index + 1, lineElement, callback), 10);
     } else {
-      setTimeout(callback, 100);
+      setTimeout(callback, 10);
     }
   }
 
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
         terminalLoader.style.opacity = '0';
         setTimeout(() => {
           terminalLoader.style.display = 'none';
-        }, 600);
-      }, 600);
+        }, 500);
+      }, 500);
     }
   }
 
