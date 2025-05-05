@@ -43,12 +43,11 @@ body {
 
 /* Custom cursor container */
 /* ===== Cursor Core Styles ===== */
-/* ===== Core Cursor Styles ===== */
-/* html, * {
-  cursor: none !important;
-} */
+body, html {
+  cursor: none;
+}
 
-/* Custom cursor container */
+/* === Custom cursor container === */
 .custom-cursor {
   position: fixed;
   width: 30px;
@@ -58,8 +57,10 @@ body {
   z-index: 9999;
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
+  transition: all 0.15s ease;
 }
 
+/* === Outer circle === */
 .cursor-outer {
   border: 2px solid var(--matrix-green);
   width: 30px;
@@ -67,8 +68,10 @@ body {
   position: absolute;
   border-radius: 50%;
   animation: cursorPulse 2s infinite;
+  transition: all 0.2s ease;
 }
 
+/* === Inner circle === */
 .cursor-inner {
   width: 6px;
   height: 6px;
@@ -78,27 +81,53 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
 }
 
+/* === Cursor Pulse Animation === */
 @keyframes cursorPulse {
   0% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.5); opacity: 0.5; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* Link hover effects */
+/* === Click effect === */
+.custom-cursor.clicking .cursor-inner {
+  transform: translate(-50%, -50%) scale(0.5);
+  background-color: var(--matrix-green);
+}
+
+/* === Hover effect === */
+.custom-cursor.hovering .cursor-outer {
+  transform: scale(1.5);
+  border-color: var(--cyber-red);
+}
+
+/* === Selecting text effect === */
+.custom-cursor.selecting .cursor-inner {
+  background-color: white;
+  width: 2px;
+  height: 14px;
+}
+
+.custom-cursor.selecting .cursor-outer {
+  border-color: white;
+  transform: scale(1.2);
+}
+
+/* === Link and button hover effect (custom icon cursor) === */
 a:hover, button:hover, .clickable:hover {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2320c20e" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>') 12 12, pointer;
 }
 
-/* Text selection effect */
+/* === Text selection highlight effect === */
 ::selection {
   background: var(--matrix-green);
   color: black;
   text-shadow: none;
 }
 
-/* Custom cursor for terminal elements */
+/* === Terminal-style elements use different cursor shape === */
 .terminal-content, .terminal-header, .skill-category {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" fill="none" stroke="%2320c20e" stroke-width="2"/><line x1="4" y1="4" x2="20" y2="20" stroke="%2320c20e" stroke-width="1"/><line x1="20" y1="4" x2="4" y2="20" stroke="%2320c20e" stroke-width="1"/></svg>') 12 12, text;
 }
