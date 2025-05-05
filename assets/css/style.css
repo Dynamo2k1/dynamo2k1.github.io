@@ -44,9 +44,9 @@ body {
 /* Custom cursor container */
 /* ===== Cursor Core Styles ===== */
 /* ===== Core Cursor Styles ===== */
-html, * {
+/* html, * {
   cursor: none !important;
-}
+} */
 
 /* Custom cursor container */
 .custom-cursor {
