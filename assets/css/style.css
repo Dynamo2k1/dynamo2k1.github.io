@@ -41,6 +41,15 @@ body {
   line-height: 1.6;
 }
 
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 36"><rect x="2" y="2" width="20" height="30" rx="2" fill="none" stroke="%2320c20e" stroke-width="2"/><rect x="8" y="8" width="8" height="4" fill="%2320c20e"/><animate attributeName="opacity" values="1;0.7;1" dur="1s" repeatCount="indefinite"/></svg>') 12 18, auto;
+}
+
+/* For click effect */
+body:active {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 36"><rect x="2" y="2" width="20" height="30" rx="2" fill="%2320c20e" opacity="0.5" stroke="%2320c20e" stroke-width="2"/><rect x="8" y="8" width="8" height="4" fill="%2300ff00"/></svg>') 12 18, auto;
+}
+
 .container {
   position: relative;
   max-width: 1200px;
