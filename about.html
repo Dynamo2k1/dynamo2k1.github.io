@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rana Uzair | About Me</title>
-    <meta name="description" content="About Rana Uzair | Cyber Security Specialist | SOC Analyst">
+    <title>Rana Uzair | Cyber Security Specialist</title>
+    <meta name="description" content="About Rana Uzair - Cyber Security Specialist and SOC Analyst">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <canvas id="matrix"></canvas>
-    <div id="particles-js"></div>
     
     <div class="container">
         <header class="cyber-header">
@@ -32,72 +31,103 @@
             </div>
         </header>
 
-        <main class="cyber-main">
+        <main class="cyber-main cyber-about">
             <!-- Bio Section -->
-            <section class="cyber-box">
-                <div class="bio-card">
-                    <div class="bio-image">
-                        <img src="assets/images/Pic.jpeg" alt="Rana Uzair">
-                        <div class="status-indicator"></div>
+            <section class="bio-section">
+                <div class="bio-image-container">
+                    <img src="assets/images/Pic.jpeg" alt="Rana Uzair" class="bio-image">
+                    <div class="status-indicator"></div>
+                </div>
+                
+                <div class="bio-content">
+                    <h2><i class="fas fa-id-card"></i> CYBER SECURITY SPECIALIST</h2>
+                    <p>4th Semester BS Cyber Security student at Air University with hands-on experience as a SOC Analyst at National Center of Cyber Security.</p>
+                    <p>Passionate about offensive security, penetration testing, and digital forensics with a strong background in CTF competitions and security research.</p>
+                    
+                    <div class="cyber-tags">
+                        <span class="tag red">Penetration Testing</span>
+                        <span class="tag blue">Digital Forensics</span>
+                        <span class="tag purple">Reverse Engineering</span>
+                        <span class="tag green">Threat Hunting</span>
                     </div>
-                    <div class="bio-content">
-                        <h3><i class="fas fa-id-card"></i> PROFILE</h3>
-                        <p>Cyber Security Specialist with expertise in both offensive and defensive security practices. Currently pursuing BS in Cyber Security while working as a SOC Analyst.</p>
-                        
-                        <div class="cyber-tags">
-                            <span class="tag red">Penetration Testing</span>
-                            <span class="tag blue">Digital Forensics</span>
-                            <span class="tag purple">Reverse Engineering</span>
-                            <span class="tag green">Threat Hunting</span>
+                    
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span class="skill-name">Penetration Testing</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 90%"></div>
+                            </div>
                         </div>
                         
-                        <h4><i class="fas fa-quote-left"></i> PHILOSOPHY</h4>
-                        <p>"Security is not a product, but a process. It's about understanding the attacker's mindset while building robust defenses."</p>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span class="skill-name">Digital Forensics</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span class="skill-name">Python Development</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Timeline Section -->
-            <section class="cyber-box">
-                <h3><i class="fas fa-history"></i> PROFESSIONAL TIMELINE</h3>
+            <!-- Professional Timeline -->
+            <section class="timeline-section">
+                <h2><i class="fas fa-history"></i> PROFESSIONAL TIMELINE</h2>
+                
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>2023 - Present</h3>
-                        <div class="timeline-content">
-                            <h4>SOC Analyst</h4>
-                            <p>National Center of Cyber Security</p>
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3 class="timeline-title">SOC Analyst</h3>
+                        <div class="timeline-subtitle">National Center of Cyber Security</div>
+                        <div class="timeline-description">
                             <ul>
-                                <li>Conducting digital forensics investigations</li>
-                                <li>Monitoring and analyzing security alerts</li>
-                                <li>Implementing SIEM solutions</li>
-                                <li>Incident response coordination</li>
+                                <li>Monitor and analyze security alerts from various sources including SIEM, IDS/IPS, and endpoint protection systems</li>
+                                <li>Conduct digital forensics investigations on compromised systems</li>
+                                <li>Implement and maintain SIEM solutions for real-time threat detection</li>
+                                <li>Coordinate incident response activities for security breaches</li>
+                                <li>Develop custom detection rules for emerging threats</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>2023 - Present</h3>
-                        <div class="timeline-content">
-                            <h4>BS Cyber Security</h4>
-                            <p>Air University</p>
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3 class="timeline-title">BS Cyber Security</h3>
+                        <div class="timeline-subtitle">Air University</div>
+                        <div class="timeline-description">
                             <ul>
-                                <li>3rd Semester completed</li>
-                                <li>Specializing in penetration testing</li>
-                                <li>Coursework in cryptography and network security</li>
-                                <li>Active in cyber security competitions</li>
+                                <li>Specializing in penetration testing and digital forensics</li>
+                                <li>Coursework in cryptography, network security, and malware analysis</li>
+                                <li>Active participant in cyber security competitions and hackathons</li>
+                                <li>Research focus on advanced persistent threats and countermeasures</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>2020 - 2022</h3>
-                        <div class="timeline-content">
-                            <h4>Intermediate Education</h4>
-                            <p>Pre-Engineering Track</p>
+                        <div class="timeline-date">2020 - 2022</div>
+                        <h3 class="timeline-title">Intermediate Education</h3>
+                        <div class="timeline-subtitle">Pre-Engineering Track</div>
+                        <div class="timeline-description">
                             <ul>
-                                <li>Physics, Chemistry, Mathematics</li>
-                                <li>85% overall score</li>
-                                <li>Developed foundational programming skills</li>
+                                <li>Physics, Chemistry, Mathematics with 85% overall score</li>
+                                <li>Developed foundational programming skills in Python and C++</li>
+                                <li>Participated in science fairs with projects on network security</li>
                             </ul>
                         </div>
                     </div>
@@ -105,24 +135,44 @@
             </section>
             
             <!-- CTF Achievements -->
-            <section class="cyber-box">
-                <h3><i class="fas fa-flag"></i> CTF ACHIEVEMENTS</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>National Cyber League</h4>
-                        <ul>
-                            <li>Top 5% in Packet Analysis (2023)</li>
-                            <li>Top 10% in Cryptography (2023)</li>
-                            <li>Top 15% Overall (2023 Season)</li>
-                        </ul>
+            <section class="ctf-section">
+                <h2><i class="fas fa-flag"></i> CTF ACHIEVEMENTS</h2>
+                
+                <div class="ctf-grid">
+                    <div class="ctf-card">
+                        <h3 class="ctf-title"><i class="fas fa-trophy"></i> National Cyber League</h3>
+                        <div class="ctf-achievements">
+                            <ul>
+                                <li>Top 5% in Packet Analysis (2023 Season)</li>
+                                <li>Top 10% in Cryptography Challenges</li>
+                                <li>Top 15% Overall in Individual Game</li>
+                                <li>Perfect score in Log Analysis category</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="skill-category">
-                        <h4>Local CTF Events</h4>
-                        <ul>
-                            <li>1st Place - Air University CTF (2023)</li>
-                            <li>2nd Place - Islamabad Cyber Challenge (2022)</li>
-                            <li>3rd Place - National Hackathon (2022)</li>
-                        </ul>
+                    
+                    <div class="ctf-card">
+                        <h3 class="ctf-title"><i class="fas fa-shield-alt"></i> Local CTF Events</h3>
+                        <div class="ctf-achievements">
+                            <ul>
+                                <li>1st Place - Air University CTF (2023)</li>
+                                <li>2nd Place - Islamabad Cyber Challenge (2022)</li>
+                                <li>3rd Place - National Hackathon (2022)</li>
+                                <li>Best Pentester Award - Cyber Youth Competition</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="ctf-card">
+                        <h3 class="ctf-title"><i class="fab fa-tryhackme"></i> TryHackMe</h3>
+                        <div class="ctf-achievements">
+                            <ul>
+                                <li>Top 1% Pakistan (Rank: 15/5000+)</li>
+                                <li>Completed 100+ rooms</li>
+                                <li>100% Completion in Offensive Path</li>
+                                <li>Created 5 challenge rooms</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -131,15 +181,16 @@
         <footer class="cyber-footer">
             <div class="social-links">
                 <a href="https://github.com/dynamo2k1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://linkedin.com/in/rana-uzair-82b8b6223/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://tryhackme.com/p/Dynamo2k1" target="_blank" aria-label="TryHackMe"><i class="fas fa-lock"></i></a>
                 <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
-            <p class="copyright">© 2025 Rana Uzair | All systems operational</p>
+            <p class="copyright">© 2023 Rana Uzair | All systems operational</p>
         </footer>
     </div>
 
     <script src="assets/js/matrix.js"></script>
-    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/terminal.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
