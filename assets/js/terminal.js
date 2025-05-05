@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "Loading 0xDEFCON modules...",
     "Mounting encrypted partitions...",
     "Establishing secure connection...",
-    "Verifying PGP keys...",
-    "Scanning for intrusions...",
-    "System fully operational"
+    "ACCEPTED..."
   ];
 
   function typeWriter(text, index, lineElement, callback) {
