@@ -1,14 +1,9 @@
-/* About Page Specific Styles */
-.cyber-about {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .bio-section {
+/* ===== ABOUT SECTION ===== */
+.bio-section {
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 3rem;
+    margin: 3rem 0;
   }
   
   .bio-image-container {
@@ -38,15 +33,8 @@
     animation: pulse 2s infinite;
   }
   
-  .bio-content h2 {
-    font-family: 'Cyberway', sans-serif;
-    color: var(--neon-cyan);
-    margin-bottom: 1rem;
-    text-shadow: 0 0 10px var(--neon-cyan);
-  }
-  
   .bio-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
     padding-left: 1.5rem;
   }
@@ -56,6 +44,7 @@
     position: absolute;
     left: 0;
     color: var(--matrix-green);
+    font-weight: bold;
   }
   
   .skill-bars {
@@ -63,21 +52,22 @@
   }
   
   .skill-bar {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .skill-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
+    font-family: 'MonoSpaceBold', monospace;
   }
   
   .skill-name {
-    font-weight: bold;
+    color: var(--matrix-green);
   }
   
   .skill-level {
-    color: var(--cyber-blue);
+    color: var(--neon-cyan);
   }
   
   .skill-bar-bg {
@@ -95,12 +85,9 @@
     transition: width 1.5s ease-out;
   }
   
-  /* Timeline Styles */
-  .timeline-section h2 {
-    font-family: 'Cyberway', sans-serif;
-    color: var(--neon-cyan);
-    margin: 2rem 0 1rem;
-    text-shadow: 0 0 10px var(--neon-cyan);
+  /* ===== TIMELINE ===== */
+  .timeline-section {
+    margin: 4rem 0;
   }
   
   .timeline {
@@ -140,18 +127,21 @@
     background: var(--cyber-purple);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--cyber-purple);
+    animation: pulse 2s infinite;
   }
   
   .timeline-date {
     color: var(--cyber-blue);
     font-weight: bold;
     margin-bottom: 0.5rem;
+    font-family: 'MonoSpaceBold', monospace;
   }
   
   .timeline-title {
     color: var(--matrix-green);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    font-family: 'Cyberway', sans-serif;
   }
   
   .timeline-subtitle {
@@ -167,7 +157,7 @@
   
   .timeline-description li {
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
   
   .timeline-description li::before {
@@ -175,14 +165,12 @@
     position: absolute;
     left: -1.5rem;
     color: var(--matrix-green);
+    font-weight: bold;
   }
   
-  /* CTF Achievements */
-  .ctf-section h2 {
-    font-family: 'Cyberway', sans-serif;
-    color: var(--neon-cyan);
-    margin: 2rem 0 1rem;
-    text-shadow: 0 0 10px var(--neon-cyan);
+  /* ===== CTF ACHIEVEMENTS ===== */
+  .ctf-section {
+    margin: 4rem 0;
   }
   
   .ctf-grid {
@@ -197,7 +185,7 @@
     border-radius: 5px;
     padding: 1.5rem;
     box-shadow: 0 0 15px rgba(32, 194, 14, 0.2);
-    transition: transform 0.3s ease;
+    transition: all 0.3s;
   }
   
   .ctf-card:hover {
@@ -211,6 +199,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-family: 'Cyberway', sans-serif;
   }
   
   .ctf-achievements ul {
@@ -220,7 +209,7 @@
   
   .ctf-achievements li {
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
   
   .ctf-achievements li::before {
@@ -228,4 +217,21 @@
     position: absolute;
     left: -1.5rem;
     color: var(--matrix-green);
+    font-weight: bold;
+  }
+  
+  /* ===== RESPONSIVE ADJUSTMENTS ===== */
+  @media (max-width: 768px) {
+    .bio-section {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .bio-content p::before {
+      display: none;
+    }
+    
+    .bio-content p {
+      padding-left: 0;
+    }
   }

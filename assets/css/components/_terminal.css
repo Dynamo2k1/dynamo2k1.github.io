@@ -1,0 +1,74 @@
+/* ===== TERMINAL STYLES ===== */
+.terminal-box {
+    background: #000;
+    border: 1px solid var(--matrix-green);
+    margin: 2rem 0;
+    box-shadow: 0 0 15px rgba(32, 194, 14, 0.3);
+  }
+  
+  .terminal-header {
+    background: rgba(0, 17, 0, 0.8);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--matrix-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'MonoSpaceBold', monospace;
+  }
+  
+  .terminal-content {
+    padding: 1rem;
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    color: var(--matrix-green);
+  }
+  
+  .terminal-content p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .terminal-content p::before {
+    content: '> ';
+    color: var(--neon-cyan);
+  }
+  
+  .blinking-cursor {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  /* ===== GITHUB FEED ===== */
+  .github-feed {
+    margin: 3rem 0;
+  }
+  
+  .github-feed h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .github-activity {
+    composes: terminal-box;
+  }
+  
+  .github-content {
+    composes: terminal-content;
+  }
+  
+  .github-content a {
+    color: var(--cyber-blue);
+    text-decoration: none;
+  }
+  
+  .github-content a:hover {
+    text-decoration: underline;
+  }

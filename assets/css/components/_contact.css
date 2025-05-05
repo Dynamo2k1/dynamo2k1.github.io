@@ -1,0 +1,123 @@
+/* ===== CONTACT SECTION ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+  }
+  
+  .contact-form {
+    background: rgba(0, 20, 0, 0.2);
+    border: 1px solid var(--matrix-green);
+    padding: 2rem;
+    border-radius: 4px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--matrix-green);
+    font-family: 'MonoSpaceBold', monospace;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--matrix-green);
+    color: var(--matrix-green);
+    font-family: 'Share Tech Mono', monospace;
+    transition: all 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px var(--neon-cyan);
+  }
+  
+  .form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .contact-info {
+    background: rgba(0, 20, 0, 0.2);
+    border: 1px solid var(--matrix-green);
+    padding: 2rem;
+    border-radius: 4px;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .contact-info a {
+    color: var(--matrix-green);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .contact-info a:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+  }
+  
+  .pgp-key {
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border: 1px solid var(--matrix-green);
+    border-radius: 4px;
+  }
+  
+  .pgp-key h4 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .terminal-box {
+    background: #000;
+    border: 1px solid var(--matrix-green);
+    margin-top: 1rem;
+  }
+  
+  .terminal-header {
+    background: rgba(0, 17, 0, 0.8);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--matrix-green);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .terminal-content {
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+    color: var(--matrix-green);
+    line-height: 1.6;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  /* ===== RESPONSIVE ADJUSTMENTS ===== */
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
