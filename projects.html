@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rana Uzair | Cyber Security Specialist</title>
+    <title>Rana Uzair | Cyber Security Projects</title>
+    <meta name="description" content="Cyber Security Projects | Ethical Hacking Tools | Security Research">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <canvas id="matrix"></canvas>
+    <div id="particles-js"></div>
     
     <div class="container">
         <header class="cyber-header">
@@ -20,10 +22,11 @@
             <div class="cyber-nav">
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> HOME</a></li>
-                        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
-                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> CERTS</a></li>
-                        <li><a href="contact.html"><i class="fas fa-terminal"></i> CONTACT</a></li>
+                        <li><a href="index.html" class="nav-link"><i class="fas fa-terminal"></i> HOME</a></li>
+                        <li><a href="projects.html" class="nav-link active"><i class="fas fa-code"></i> PROJECTS</a></li>
+                        <li><a href="certifications.html" class="nav-link"><i class="fas fa-certificate"></i> CERTS</a></li>
+                        <li><a href="about.html" class="nav-link"><i class="fas fa-user-secret"></i> ABOUT</a></li>
+                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -31,64 +34,165 @@
 
         <main class="cyber-main">
             <!-- NetSnoop Project -->
-            <section class="project-card">
-                <div class="project-header">
-                    <h3><i class="fas fa-network-wired"></i> NETSNOOP</h3>
-                    <div class="project-tags">
-                        <span class="tag offensive">OFFENSIVE</span>
-                        <span class="tag defensive">DEFENSIVE</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-image">
-                        <img src="assets/images/netsnoop-screenshot.png" alt="NetSnoop">
-                    </div>
-                    <div class="project-details">
-                        <h4><i class="fas fa-terminal"></i> DESCRIPTION</h4>
-                        <p>Advanced packet sniffer written in Python that captures and decodes live network traffic, supporting multiple protocols including IPv4, ARP, IPv6, TCP, UDP, ICMP, DNS, DHCP, and VLAN.</p>
-                        
-                        <h4><i class="fas fa-cogs"></i> FEATURES</h4>
-                        <ul>
-                            <li>Real-time protocol statistics</li>
-                            <li>Hex dump output</li>
-                            <li>PCAP format saving</li>
-                            <li>Customizable filters</li>
-                        </ul>
-                        
-                        <h4><i class="fas fa-code"></i> TECH STACK</h4>
-                        <div class="tech-stack">
-                            <span><i class="fab fa-python"></i> Python</span>
-                            <span><i class="fas fa-network-wired"></i> Scapy</span>
-                            <span><i class="fas fa-terminal"></i> Argparse</span>
+            <section class="cyber-card">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-network-wired"></i> NETSNOOP</h3>
+                        <div class="project-tags">
+                            <span class="tag offensive">OFFENSIVE</span>
+                            <span class="tag defensive">DEFENSIVE</span>
                         </div>
-                        
-                        <div class="project-links">
-                            <a href="https://github.com/dynamo2k1/NetSnoop" class="cyber-button">
-                                <i class="fab fa-github"></i> View Source
-                            </a>
-                            <a href="#" class="cyber-button">
-                                <i class="fas fa-book"></i> Documentation
-                            </a>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/netsnoop-screenshot.png" alt="NetSnoop">
+                        </div>
+                        <div class="project-details">
+                            <h4><i class="fas fa-terminal"></i> DESCRIPTION</h4>
+                            <p>Advanced packet sniffer written in Python that captures and decodes live network traffic, supporting multiple protocols including IPv4, ARP, IPv6, TCP, UDP, ICMP, DNS, DHCP, and VLAN.</p>
+                            
+                            <h4><i class="fas fa-cogs"></i> FEATURES</h4>
+                            <ul>
+                                <li>Real-time protocol statistics and analysis</li>
+                                <li>Hex dump output for deep packet inspection</li>
+                                <li>PCAP format saving for Wireshark analysis</li>
+                                <li>Customizable BPF filters</li>
+                                <li>Multi-threaded packet processing</li>
+                            </ul>
+                            
+                            <h4><i class="fas fa-code"></i> TECH STACK</h4>
+                            <div class="tech-stack">
+                                <span><i class="fab fa-python"></i> Python 3.9+</span>
+                                <span><i class="fas fa-network-wired"></i> Scapy</span>
+                                <span><i class="fas fa-terminal"></i> Argparse</span>
+                                <span><i class="fas fa-chart-bar"></i> Matplotlib</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/dynamo2k1/NetSnoop" class="cyber-button" target="_blank">
+                                    <i class="fab fa-github"></i> View Source
+                                </a>
+                                <a href="#" class="cyber-button">
+                                    <i class="fas fa-book"></i> Documentation
+                                </a>
+                                <a href="#" class="cyber-button">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Add other projects similarly -->
+            <!-- SSHield Project -->
+            <section class="cyber-card">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-lock"></i> SSHield</h3>
+                        <div class="project-tags">
+                            <span class="tag defensive">SECURITY</span>
+                            <span class="tag development">DEVOPS</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="assets/images/sshield-screenshot.png" alt="SSHield">
+                        </div>
+                        <div class="project-details">
+                            <h4><i class="fas fa-terminal"></i> DESCRIPTION</h4>
+                            <p>Secure SSH tunneling solution with military-grade encryption and intrusion detection system designed to protect remote server access.</p>
+                            
+                            <h4><i class="fas fa-cogs"></i> FEATURES</h4>
+                            <ul>
+                                <li>Two-factor authentication with TOTP support</li>
+                                <li>Real-time traffic monitoring and anomaly detection</li>
+                                <li>Automated brute-force protection with fail2ban integration</li>
+                                <li>Port knocking implementation for stealth access</li>
+                                <li>Detailed access logging and session recording</li>
+                            </ul>
+                            
+                            <h4><i class="fas fa-code"></i> TECH STACK</h4>
+                            <div class="tech-stack">
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span><i class="fas fa-lock"></i> OpenSSL</span>
+                                <span><i class="fas fa-shield-alt"></i> Paramiko</span>
+                                <span><i class="fas fa-database"></i> SQLite</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/dynamo2k1/SSHield" class="cyber-button" target="_blank">
+                                    <i class="fab fa-github"></i> View Source
+                                </a>
+                                <a href="#" class="cyber-button">
+                                    <i class="fas fa-book"></i> Documentation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- VortexTunnel Project -->
+            <section class="cyber-card">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-tornado"></i> VortexTunnel</h3>
+                        <div class="project-tags">
+                            <span class="tag offensive">PENTESTING</span>
+                            <span class="tag network">NETWORKING</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-details">
+                            <h4><i class="fas fa-terminal"></i> DESCRIPTION</h4>
+                            <p>Advanced Python proxy with TLS/SSL support and traffic analysis capabilities designed for security research and penetration testing.</p>
+                            
+                            <h4><i class="fas fa-cogs"></i> FEATURES</h4>
+                            <ul>
+                                <li>DNS over HTTPS (DoH) implementation</li>
+                                <li>Automatic User-Agent rotation</li>
+                                <li>Detailed traffic logging and analysis</li>
+                                <li>SSL stripping detection and prevention</li>
+                                <li>Support for HTTP/HTTPS protocols</li>
+                                <li>Modular architecture for easy extension</li>
+                            </ul>
+                            
+                            <h4><i class="fas fa-code"></i> TECH STACK</h4>
+                            <div class="tech-stack">
+                                <span><i class="fab fa-python"></i> Python 3.10+</span>
+                                <span><i class="fas fa-lock"></i> Cryptography</span>
+                                <span><i class="fas fa-exchange-alt"></i> Asyncio</span>
+                                <span><i class="fas fa-chart-line"></i> Pandas</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/dynamo2k1/VortexTunnel" class="cyber-button" target="_blank">
+                                    <i class="fab fa-github"></i> View Source
+                                </a>
+                                <a href="#" class="cyber-button">
+                                    <i class="fas fa-book"></i> Whitepaper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Add more projects as needed -->
         </main>
+
         <footer class="cyber-footer">
             <div class="social-links">
-                <a href="https://github.com/dynamo2k1" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/dynamo2k1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
             <p class="copyright">© 2025 Rana Uzair | All systems operational</p>
         </footer>
     </div>
 
     <script src="assets/js/matrix.js"></script>
-    <script src="assets/js/github.js"></script>
-    <script src="assets/js/terminal.js"></script>
-    <script src="js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,39 +1,52 @@
-// Main interactive elements
+// Main Interactive Elements
 document.addEventListener('DOMContentLoaded', function() {
-    // Typewriter effect for terminal elements
-    const typewriterElements = document.querySelectorAll('.typewriter');
+    // Initialize components
+    initMatrix();
+    initTerminal();
+    initGitHubFeed();
+    initTypewriter();
+    initParticles();
     
-    typewriterElements.forEach(el => {
-        const text = el.textContent;
-        el.textContent = '';
-        
-        let i = 0;
-        const typing = setInterval(() => {
-            if (i < text.length) {
-                el.textContent += text.charAt(i);
-                i++;
-            } else {
-                clearInterval(typing);
-            }
-        }, 50);
+    // Add event listeners
+    document.querySelectorAll('.cyber-button').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        this.style.boxShadow = '0 0 15px var(--matrix-green)';
+      });
+      
+      button.addEventListener('mouseleave', function() {
+        this.style.boxShadow = 'none';
+      });
     });
     
-    // Animate skill bars
-    const skillBars = document.querySelectorAll('.skill-bar');
-    skillBars.forEach(bar => {
-        const width = bar.getAttribute('data-width');
-        bar.style.width = '0';
-        setTimeout(() => {
-            bar.style.width = width;
-        }, 500);
-    });
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Form submission would be handled here with PGP encryption');
+      });
+    }
     
-    // Terminal cursor blink
-    const cursors = document.querySelectorAll('.cursor');
-    setInterval(() => {
-        cursors.forEach(cursor => {
-            cursor.style.visibility = 
-                cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
-        });
-    }, 500);
-});
+    // Initialize functions
+    function initMatrix() {
+      // Matrix effect is initialized in matrix.js
+    }
+    
+    function initTerminal() {
+      // Terminal is initialized in terminal.js
+    }
+    
+    function initGitHubFeed() {
+      // GitHub feed is initialized in github.js
+    }
+    
+    function initTypewriter() {
+      // Typewriter effect is initialized in typewriter.js
+    }
+    
+    function initParticles() {
+      // Particles effect is initialized in particles.js
+    }
+    
+    // Add any other initialization functions here
+  });
