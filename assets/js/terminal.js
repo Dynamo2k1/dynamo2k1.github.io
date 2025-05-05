@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     "System fully operational"
   ];
 
-  // typeWriter now receives the line element and updates its content
   function typeWriter(text, index, lineElement, callback) {
     if (index < text.length) {
       lineElement.textContent = lineElement.textContent + text.charAt(index);
@@ -24,12 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function displayMessages(messages, index) {
     if (index < messages.length) {
-      // Create a new <p> element for each line
       const line = document.createElement('p');
-      line.textContent = '> ';  // Prompt symbol
+      line.textContent = '> ';  
       terminalContent.appendChild(line);
 
-      // Start typing inside this line
       typeWriter(messages[index], 0, line, () => {
         terminalContent.scrollTop = terminalContent.scrollHeight;
         displayMessages(messages, index + 1);

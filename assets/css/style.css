@@ -181,8 +181,8 @@ body {
 
 .cyber-nav {
   position: absolute;        /* Position relative to nearest positioned ancestor */
-  top: 0;                   /* Align to top */
-  right: 0;                 /* Align to right */
+  top: 40px;                   /* Align to top */
+  right: 20px;                 /* Align to right */
   width: auto;              /* Adjust width as needed */
   padding: 10px 20px;       /* Optional padding for spacing */
 }
@@ -196,6 +196,27 @@ body {
   color: inherit;            /* Use inherited text color */
   display: flex;             /* For icon and text alignment */
   align-items: center;
+}
+
+.cyber-nav ul li a i {
+  background-color: #00ff00;   /* Example: neon green background */
+  color: #000;                 /* Icon color inside the circle */
+  border-radius: 50%;          /* Make it circular */
+  padding: 6px;                /* Space inside the circle */
+  margin-right: 8px;           /* Space between icon and text */
+  font-size: 14px;             /* Adjust icon size */
+  display: inline-flex;        /* Make sure padding works properly */
+  align-items: center;
+  justify-content: center;
+  width: 28px;                 /* Fixed width and height for circle */
+  height: 28px;
+  box-shadow: 0 0 8px #00ff00; /* Optional: glowing effect */
+  transition: background-color 0.3s ease;
+}
+
+.cyber-nav ul li a:hover i {
+  background-color: #00cc00;   /* Darker green on hover */
+  box-shadow: 0 0 12px #00cc00;
 }
 
 
