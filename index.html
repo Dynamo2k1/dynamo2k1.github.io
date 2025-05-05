@@ -6,16 +6,20 @@
     <title>Rana Uzair | Cyber Security Specialist</title>
     <meta name="description" content="Cyber Security Specialist | Penetration Tester | Digital Forensics Expert">
     <meta name="keywords" content="cyber security, ethical hacking, penetration testing, digital forensics">
+    
+    <!-- External Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Background Effects -->
+
+    <!-- Matrix Background -->
     <canvas id="matrix"></canvas>
-    <div id="particles-js"></div>
-    
+
     <!-- Terminal Loader -->
     <div class="terminal-loader">
         <div class="terminal-header">
@@ -35,6 +39,7 @@
 
     <!-- Main Container -->
     <div class="container">
+        
         <!-- Header -->
         <header class="cyber-header">
             <div class="glitch-container">
@@ -44,11 +49,10 @@
             <div class="cyber-nav">
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="nav-link active"><i class="fas fa-terminal"></i> HOME</a></li>
-                        <li><a href="projects.html" class="nav-link"><i class="fas fa-code"></i> PROJECTS</a></li>
-                        <li><a href="certifications.html" class="nav-link"><i class="fas fa-certificate"></i> CERTS</a></li>
-                        <li><a href="about.html" class="nav-link"><i class="fas fa-user-secret"></i> ABOUT</a></li>
-                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> CONTACT</a></li>
+                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> HOME</a></li>
+                        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> CERTS</a></li>
+                        <li><a href="contact.html"><i class="fas fa-terminal"></i> CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -56,25 +60,30 @@
 
         <!-- Main Content -->
         <main class="cyber-main">
+            
             <!-- Bio Section -->
-            <section class="cyber-box">
-                <div class="bio-container">
+            <section class="cyber-bio">
+                <div class="bio-card">
                     <div class="bio-image">
                         <img src="assets/images/Pic.jpeg" alt="Rana Uzair">
                         <div class="status-indicator"></div>
                     </div>
                     <div class="bio-content">
-                        <h2 class="glitch">RANA_UZAIR</h2>
-                        <h3>Cyber Security Specialist</h3>
+                        <h3><i class="fas fa-user-secret"></i> BIO</h3>
                         <p>> 4th Semester BS Cyber Security @ Air University</p>
                         <p>> SOC Analyst @ National Center of Cyber Security</p>
                         <p>> CTF Player & Security Researcher</p>
+                        <div class="cyber-tags">
+                            <span class="tag red">Penetration Testing</span>
+                            <span class="tag blue">Digital Forensics</span>
+                            <span class="tag purple">Reverse Engineering</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Skills Section -->
-            <section class="cyber-box">
+            <section class="cyber-skills">
                 <h3><i class="fas fa-laptop-code"></i> SKILL MATRIX</h3>
                 <div class="skills-grid">
                     <div class="skill-category">
@@ -107,31 +116,32 @@
                 </div>
             </section>
 
-            <!-- GitHub Feed -->
-            <section class="cyber-box">
+            <!-- GitHub Feed Section -->
+            <section class="github-feed">
                 <h3><i class="fab fa-github"></i> LATEST COMMITS</h3>
                 <div id="github-activity" class="terminal-box">
                     <div class="terminal-header">
                         <span>GIT LOG</span>
-                        <span>dynamo2k1@github</span>
                     </div>
                     <div class="terminal-content" id="github-content">
-                        > Connecting to GitHub API...
+                        > Fetching GitHub activity...
                     </div>
                 </div>
             </section>
+
         </main>
 
         <!-- Footer -->
         <footer class="cyber-footer">
             <div class="social-links">
                 <a href="https://github.com/dynamo2k1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://linkedin.com/in/rana-uzair-82b8b6223/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://tryhackme.com/p/dynamo2k1" target="_blank" aria-label="TryHackMe"><i class="fas fa-lock"></i></a>
             </div>
             <p class="copyright">© 2025 Rana Uzair | All systems operational</p>
         </footer>
+
     </div>
 
     <!-- JavaScript Files -->
@@ -141,5 +151,6 @@
     <script src="assets/js/github.js"></script>
     <script src="assets/js/typewriter.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>
