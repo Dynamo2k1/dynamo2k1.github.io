@@ -48,141 +48,59 @@ html, * {
   cursor: none !important;
 }
 
+/* Custom cursor container */
 .custom-cursor {
   position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
+  mix-blend-mode: difference;
   transform: translate(-50%, -50%);
-  filter: drop-shadow(0 0 5px var(--matrix-green));
 }
 
 .cursor-outer {
-  width: 24px;
-  height: 24px;
-  border: 1px solid var(--matrix-green);
-  border-radius: 50%;
+  border: 2px solid var(--matrix-green);
+  width: 30px;
+  height: 30px;
   position: absolute;
-  box-shadow: 
-    0 0 10px var(--matrix-green),
-    inset 0 0 5px var(--matrix-green);
+  border-radius: 50%;
   animation: cursorPulse 2s infinite;
 }
 
 .cursor-inner {
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   background-color: var(--cyber-red);
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 8px var(--cyber-red);
-  transition: all 0.1s ease;
 }
 
-.cursor-crosshair {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-}
-
-.cursor-crosshair::before,
-.cursor-crosshair::after {
-  content: '';
-  position: absolute;
-  background-color: var(--matrix-green);
-  box-shadow: 0 0 3px var(--matrix-green);
-}
-
-.cursor-crosshair::before {
-  width: 2px;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cursor-crosshair::after {
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* ===== Animations ===== */
 @keyframes cursorPulse {
-  0%, 100% { 
-    transform: scale(1); 
-    opacity: 0.9; 
-  }
-  50% { 
-    transform: scale(1.1); 
-    opacity: 0.6; 
-  }
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
-@keyframes cursorClick {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.8); }
-  100% { transform: scale(1); }
+/* Link hover effects */
+a:hover, button:hover, .clickable:hover {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2320c20e" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>') 12 12, pointer;
 }
 
-/* ===== State Variations ===== */
-.custom-cursor.click-active {
-  animation: cursorClick 0.3s ease-out;
-}
-
-.custom-cursor.hover-link .cursor-inner {
-  background-color: var(--neon-cyan);
-  box-shadow: 0 0 10px var(--neon-cyan);
-}
-
-.custom-cursor.hover-link .cursor-outer {
-  border-color: var(--neon-cyan);
-  box-shadow: 
-    0 0 15px var(--neon-cyan),
-    inset 0 0 8px var(--neon-cyan);
-}
-
-.custom-cursor.hover-text .cursor-inner {
-  transform: translate(-50%, -50%) scale(1.5);
-}
-
-.custom-cursor.hover-text .cursor-outer {
-  transform: scale(1.3);
-}
-
-.custom-cursor.hover-button .cursor-inner {
-  background-color: var(--cyber-yellow);
-  box-shadow: 0 0 12px var(--cyber-yellow);
-}
-
-.custom-cursor.hover-button .cursor-outer {
-  border-color: var(--cyber-yellow);
-  box-shadow: 
-    0 0 18px var(--cyber-yellow),
-    inset 0 0 10px var(--cyber-yellow);
-}
-
-/* ===== Text Selection Effect ===== */
+/* Text selection effect */
 ::selection {
   background: var(--matrix-green);
   color: black;
+  text-shadow: none;
 }
 
-.text-select-effect {
-  position: absolute;
-  background: rgba(32, 194, 14, 0.3);
-  border-radius: 2px;
-  z-index: 9998;
-  pointer-events: none;
-  animation: textSelectPulse 0.4s ease-out;
-}
-
-@keyframes textSelectPulse {
-  0% { opacity: 0; transform: scaleY(0.2); }
-  50% { opacity: 1; transform: scaleY(1); }
-  100% { opacity: 0; transform: scaleY(0.2); }
+/* Custom cursor for terminal elements */
+.terminal-content, .terminal-header, .skill-category {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" fill="none" stroke="%2320c20e" stroke-width="2"/><line x1="4" y1="4" x2="20" y2="20" stroke="%2320c20e" stroke-width="1"/><line x1="20" y1="4" x2="4" y2="20" stroke="%2320c20e" stroke-width="1"/></svg>') 12 12, text;
 }
 
 /*---------*/
