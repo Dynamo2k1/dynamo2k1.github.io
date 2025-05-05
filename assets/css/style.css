@@ -11,12 +11,7 @@
 
 @font-face {
   font-family: 'Cyberway';
-  src: url('../fonts/Cyberway.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'MonoSpaceBold';
-  src: url('../fonts/MonoSpaceBold.ttf') format('truetype');
+  src: url('../assets/fonts/Cyberway.ttf') format('truetype');
 }
 
 body {
@@ -28,25 +23,6 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, transparent 49%, var(--cyber-red) 50%, transparent 51%);
-  opacity: 0.1;
-  pointer-events: none;
-  animation: hologram 3s linear infinite;
-}
 /* Matrix Background */
 #matrix {
   position: fixed;
@@ -304,28 +280,6 @@ body {
   font-family: 'Courier New', monospace;
 }
 
-/* Header Styles */
-.cyber-header {
-  text-align: center;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.cyber-header h1 {
-  font-family: 'Cyberway', sans-serif;
-  letter-spacing: 0.2rem;
-  margin-bottom: 10px;
-}
-
-.cyber-subtitle {
-  font-family: 'MonoSpaceBold', monospace;
-  font-size: 1.5rem;
-  text-shadow: 0 0 10px var(--cyber-blue);
-  color: var(--cyber-purple);
-}
-
-
-
 /* Animations */
 @keyframes scanline {
   0% { top: 0; }
@@ -350,11 +304,3 @@ body {
       margin-bottom: 20px;
   }
 }
-
-/* Import Components */
-@import url('components/_animations.css');
-@import url('components/_cards.css');
-@import url('components/_navigation.css');
-@import url('components/_terminal.css');
-@import url('components/_projects.css');
-@import url('components/_certifications.css');
