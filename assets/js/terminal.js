@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function typeWriter(text, index, lineElement, callback) {
     if (index < text.length) {
       lineElement.textContent = lineElement.textContent + text.charAt(index);
-      setTimeout(() => typeWriter(text, index + 1, lineElement, callback), 20);
+      setTimeout(() => typeWriter(text, index + 1, lineElement, callback), 10);
     } else {
-      setTimeout(callback, 500);
+      setTimeout(callback, 100);
     }
   }
 
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
         terminalLoader.style.opacity = '0';
         setTimeout(() => {
           terminalLoader.style.display = 'none';
-        }, 1000);
-      }, 1000);
+        }, 600);
+      }, 600);
     }
   }
 
