@@ -1,0 +1,69 @@
+/* Certifications Section */
+.certifications-timeline {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .certification-item {
+    position: relative;
+    padding: 2rem;
+    margin-left: 2rem;
+    border-left: 2px solid var(--matrix-green);
+  }
+  
+  .certification-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 2rem;
+    width: 16px;
+    height: 16px;
+    background: var(--cyber-purple);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--cyber-purple);
+  }
+  
+  .certification-card {
+    background: rgba(0, 30, 0, 0.3);
+    padding: 1.5rem;
+    border: 1px solid var(--matrix-green);
+    position: relative;
+    backdrop-filter: blur(5px);
+  }
+  
+  .cert-badge {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: var(--cyber-red);
+    padding: 0.5rem 1rem;
+    transform: rotate(5deg);
+    box-shadow: 0 0 15px var(--cyber-red);
+    font-size: 0.8rem;
+  }
+  
+  .credential-id {
+    font-family: 'Courier New', monospace;
+    color: var(--cyber-blue);
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .verify-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--matrix-green);
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(0, 255, 0, 0.05);
+  }
+  
+  .verify-button:hover {
+    background: rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 15px var(--matrix-green);
+  }
+  
+  .verify-button i {
+    margin-right: 5px;
+  }

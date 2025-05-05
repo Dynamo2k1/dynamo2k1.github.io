@@ -1,0 +1,93 @@
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 2rem 0;
+  }
+  
+  .project-card {
+    background: rgba(0, 20, 0, 0.3);
+    border: 1px solid var(--matrix-green);
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--matrix-green);
+  }
+  
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+      var(--cyber-red), 
+      var(--matrix-green), 
+      var(--cyber-blue));
+    z-index: -1;
+    animation: gradient-border 3s ease infinite;
+    background-size: 200% 200%;
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .project-tag {
+    background: rgba(0, 255, 0, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 1px solid var(--matrix-green);
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .project-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .project-link.demo {
+    border-color: var(--cyber-blue);
+    color: var(--cyber-blue);
+  }
+  
+  .project-link.source {
+    border-color: var(--cyber-purple);
+    color: var(--cyber-purple);
+  }
+  
+  .project-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px currentColor;
+  }
+  
+  @keyframes gradient-border {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes hologram {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+  }
