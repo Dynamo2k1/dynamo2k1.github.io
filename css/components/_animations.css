@@ -1,0 +1,72 @@
+/* Cyber Animations */
+@keyframes glitch {
+    0% {
+      text-shadow: 2px 0 var(--hacker-red), -2px 0 var(--neon-cyan);
+      transform: translate(0);
+    }
+    20% {
+      text-shadow: 3px 0 var(--hacker-red), -3px 0 var(--neon-cyan);
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      text-shadow: 2px 0 var(--cyber-purple), -2px 0 var(--cyber-yellow);
+      transform: translate(0);
+    }
+    60% {
+      text-shadow: 3px 0 var(--cyber-purple), -3px 0 var(--cyber-yellow);
+      transform: translate(2px, -2px);
+    }
+    80% {
+      text-shadow: 2px 0 var(--hacker-red), -2px 0 var(--neon-cyan);
+      transform: translate(0);
+    }
+    100% {
+      text-shadow: 3px 0 var(--hacker-red), -3px 0 var(--neon-cyan);
+      transform: translate(-2px, 2px);
+    }
+  }
+  
+  @keyframes scanline {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+      box-shadow: 0 0 5px var(--matrix-green);
+    }
+    50% {
+      opacity: 1;
+      box-shadow: 0 0 20px var(--matrix-green);
+    }
+    100% {
+      opacity: 0.5;
+      box-shadow: 0 0 5px var(--matrix-green);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+    }
+    20%, 22%, 24%, 55% {
+      opacity: 0.5;
+    }
+  }
