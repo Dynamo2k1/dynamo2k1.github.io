@@ -1,4 +1,4 @@
-/* ===== ROOT VARIABLES ===== */
+/* Main Cyber Theme */
 :root {
   /* Core Cyber Colors */
   --matrix-green: #20c20e;
@@ -10,7 +10,6 @@
   --cyber-purple: #bc13fe;
   --cyber-yellow: #f5d90a;
   --neon-cyan: #00f0ff;
-  --hacker-red: #ff003c;
   
   /* UI Elements */
   --dark-layer: rgba(0, 20, 0, 0.3);
@@ -20,8 +19,6 @@
     rgba(255, 0, 60, 0.3) 50%, 
     rgba(255, 0, 60, 0) 100%);
 }
-
-/* ===== FONTS ===== */
 @font-face {
   font-family: 'Cyberway';
   src: url('../fonts/Cyberway.ttf') format('truetype');
@@ -34,7 +31,6 @@
   font-display: swap;
 }
 
-/* ===== BASE STYLES ===== */
 body {
   background-color: var(--terminal-bg);
   color: var(--matrix-green);
@@ -70,7 +66,9 @@ body {
   z-index: -1;
 }
 
-/* ===== HEADINGS ===== */
+
+
+/* HEADINGS  */
 .cyber-main h1 {
   font-family: 'Cyberway', sans-serif;
   font-size: 3.5rem;
@@ -117,7 +115,289 @@ body {
   margin: 1rem 0;
 }
 
-/* ===== COMPONENT IMPORTS ===== */
+/* Matrix Background */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+/* Terminal Loader */
+.terminal-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 1s ease-out;
+}
+
+.terminal-header {
+  width: 80%;
+  max-width: 600px;
+  background-color: #001100;
+  border: 1px solid var(--matrix-green);
+  padding: 10px;
+  box-shadow: 0 0 15px var(--matrix-green);
+}
+
+.terminal-content {
+  width: 80%;
+  max-width: 600px;
+  height: 200px;
+  background-color: #000;
+  border: 1px solid var(--matrix-green);
+  padding: 20px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  font-family: 'Cyberway', sans-serif;
+  font-size: 3rem;
+  color: var(--matrix-green);
+  text-shadow: 0 0 10px var(--matrix-green);
+  animation: glitch 2s infinite;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--cyber-red);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--cyber-blue);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(31px, 9999px, 94px, 0); }
+  10% { clip: rect(112px, 9999px, 76px, 0); }
+  20% { clip: rect(85px, 9999px, 77px, 0); }
+  30% { clip: rect(27px, 9999px, 97px, 0); }
+  40% { clip: rect(64px, 9999px, 98px, 0); }
+  50% { clip: rect(61px, 9999px, 85px, 0); }
+  60% { clip: rect(99px, 9999px, 114px, 0); }
+  70% { clip: rect(34px, 9999px, 115px, 0); }
+  80% { clip: rect(98px, 9999px, 129px, 0); }
+  90% { clip: rect(43px, 9999px, 96px, 0); }
+  100% { clip: rect(82px, 9999px, 64px, 0); }
+}
+
+/* Bio Card */
+.bio-card {
+  display: flex;
+  background: rgba(0, 20, 0, 0.3);
+  border: 1px solid var(--matrix-green);
+  padding: 20px;
+  margin: 20px 0;
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.bio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--matrix-green);
+  box-shadow: 0 0 10px var(--matrix-green);
+  animation: scanline 6s linear infinite;
+}
+
+.bio-image {
+  width: 250px;
+  height: 250px;
+  border: 2px solid var(--matrix-green);
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  position: relative;
+}
+
+.bio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover ensures the image fills the container */
+  display: block;
+  border-radius: 50%; /* optional, makes sure image edges are rounded */
+}
+.status-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff00;
+  animation: pulse 2s infinite;
+}
+
+/* ul styling*/
+.cyber-nav ul {
+  list-style: none;          /* Remove bullet points */
+  margin: 0;                 /* Remove default margin */
+  padding: 0;                /* Remove default padding */
+  display: flex;             /* Arrange list items horizontally */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;       /* Vertically center items */
+}
+
+.cyber-nav {
+  position: absolute;        /* Position relative to nearest positioned ancestor */
+  top: 40px;                   /* Align to top */
+  right: 20px;                 /* Align to right */
+  width: auto;              /* Adjust width as needed */
+  padding: 10px 20px;       /* Optional padding for spacing */
+}
+
+.cyber-nav ul li {
+  margin-left: 20px;         /* Space between menu items */
+}
+
+.cyber-nav ul li a {
+  text-decoration: none;     /* Remove underline */
+  color: inherit;            /* Use inherited text color */
+  display: flex;             /* For icon and text alignment */
+  align-items: center;
+}
+
+.cyber-nav ul li a i {
+  background-color: #00ff00;   /* Example: neon green background */
+  color: #000;                 /* Icon color inside the circle */
+  border-radius: 50%;          /* Make it circular */
+  padding: 6px;                /* Space inside the circle */
+  margin-right: 8px;           /* Space between icon and text */
+  font-size: 14px;             /* Adjust icon size */
+  display: inline-flex;        /* Make sure padding works properly */
+  align-items: center;
+  justify-content: center;
+  width: 28px;                 /* Fixed width and height for circle */
+  height: 28px;
+  box-shadow: 0 0 8px #48ff00; /* Optional: glowing effect */
+  transition: background-color 0.3s ease;
+}
+
+.cyber-nav ul li a:hover i {
+  background-color: #234723;   /* Darker green on hover */
+  box-shadow: 0 0 12px #326b32;
+}
+
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.skill-category {
+  background: rgba(0, 30, 0, 0.2);
+  border: 1px solid var(--matrix-green);
+  padding: 15px;
+}
+
+.skill-category h4 {
+  color: var(--cyber-purple);
+  border-bottom: 1px dashed var(--matrix-green);
+  padding-bottom: 5px;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-category li {
+  padding: 5px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.skill-category li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--matrix-green);
+}
+
+/* GitHub Terminal */
+.terminal-box {
+  background: #000;
+  border: 1px solid var(--matrix-green);
+  margin: 20px 0;
+}
+
+.terminal-header {
+  background: #001100;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--matrix-green);
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminal-content {
+  padding: 15px;
+  height: 200px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes scanline {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Responsive Design */
+@media (max-width: 760px) {
+  .bio-card {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .bio-image {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+}
+
+
 @import url('components/_animations.css');
 @import url('components/_cards.css');
 @import url('components/_navigation.css');
