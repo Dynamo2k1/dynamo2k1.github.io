@@ -1,39 +1,71 @@
-<!-- projects.html -->
-<div class="project-card">
-    <div class="project-header">
-        <h3><i class="fas fa-network-wired"></i> NetSnoop</h3>
-        <div class="project-labels">
-            <span class="label offensive">Offensive</span>
-            <span class="label defensive">Defensive</span>
-        </div>
-    </div>
-    <div class="project-body">
-        <p class="project-desc">
-            Advanced network analysis tool combining packet sniffing and 
-            vulnerability scanning capabilities. Features real-time protocol 
-            analysis and threat detection.
-        </p>
-        <div class="tech-stack">
-            <i class="fab fa-python"></i>
-            <i class="fas fa-terminal"></i>
-            <i class="fas fa-shield-alt"></i>
-        </div>
-        <div class="project-diagram">
-            <img src="assets/images/netsnoop-flow.svg" alt="NetSnoop Architecture">
-        </div>
-    </div>
-    <div class="ctf-trophies">
-        <div class="ctf-card">
-            <div class="ctf-rank first-place">
-                <i class="fas fa-trophy"></i>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as index.html -->
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    
+    <div class="container">
+        <header class="cyber-header">
+            <div class="glitch-container">
+                <h1 class="glitch" data-text="PROJECTS">PROJECTS</h1>
+                <h2 class="cyber-subtitle">CYBER TOOL DEVELOPMENT</h2>
             </div>
-            <h4>National Cyber League 2023</h4>
-            <p>Top 5% in Packet Analysis Challenge</p>
-            <div class="ctf-skills">
-                <span>Wireshark</span>
-                <span>PCAP Analysis</span>
-                <span>Network Forensics</span>
-            </div>
-        </div>
+            <!-- Same nav as index.html -->
+        </header>
+
+        <main class="cyber-main">
+            <!-- NetSnoop Project -->
+            <section class="project-card">
+                <div class="project-header">
+                    <h3><i class="fas fa-network-wired"></i> NETSNOOP</h3>
+                    <div class="project-tags">
+                        <span class="tag offensive">OFFENSIVE</span>
+                        <span class="tag defensive">DEFENSIVE</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="assets/images/netsnoop-screenshot.png" alt="NetSnoop">
+                    </div>
+                    <div class="project-details">
+                        <h4><i class="fas fa-terminal"></i> DESCRIPTION</h4>
+                        <p>Advanced packet sniffer written in Python that captures and decodes live network traffic, supporting multiple protocols including IPv4, ARP, IPv6, TCP, UDP, ICMP, DNS, DHCP, and VLAN.</p>
+                        
+                        <h4><i class="fas fa-cogs"></i> FEATURES</h4>
+                        <ul>
+                            <li>Real-time protocol statistics</li>
+                            <li>Hex dump output</li>
+                            <li>PCAP format saving</li>
+                            <li>Customizable filters</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-code"></i> TECH STACK</h4>
+                        <div class="tech-stack">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-network-wired"></i> Scapy</span>
+                            <span><i class="fas fa-terminal"></i> Argparse</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/dynamo2k1/NetSnoop" class="cyber-button">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                            <a href="#" class="cyber-button">
+                                <i class="fas fa-book"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Add other projects similarly -->
+        </main>
+        
+        <!-- Same footer as index.html -->
     </div>
-</div>
+    
+    <!-- Same scripts as index.html -->
+</body>
+</html>
