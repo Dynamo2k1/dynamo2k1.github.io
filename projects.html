@@ -1,91 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Same head as index -->
-</head>
-<body>
-  <canvas class="matrix-bg" id="matrix"></canvas>
-  
-  <header class="terminal-header">
-    <h1>> Rana_Uzair@cyberspace:~/projects$ ls -la</h1>
-  </header>
-
-  <main>
-    <div class="project-grid">
-        <!-- NetSnoop -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3>NetSnoop</h3>
-            <div class="tech-stack">
-              <span class="lang-tag">Python</span>
-              <span class="tool-tag">Scapy</span>
-            </div>
-          </div>
-          
-          <div class="project-body">
-            <p class="project-desc">
-              Advanced packet sniffer supporting IPv4/6, TCP/UDP, DNS protocols.
-              Features real-time traffic analysis and PCAP export.
-            </p>
-            
-            <div class="project-features">
-              <div class="feature">
-                <i class="fas fa-shield-alt"></i>
-                <span>Traffic Decryption</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-chart-network"></i>
-                <span>Protocol Statistics</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-footer">
-            <a href="#" class="cta-button">
-              <i class="fab fa-github"></i>
-              View Source
-            </a>
-          </div>
+<!-- projects.html -->
+<div class="project-card">
+    <div class="project-header">
+        <h3><i class="fas fa-network-wired"></i> NetSnoop</h3>
+        <div class="project-labels">
+            <span class="label offensive">Offensive</span>
+            <span class="label defensive">Defensive</span>
         </div>
-      
-        <!-- Seekora Search Engine -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Seekora</h3>
-            <div class="tech-stack">
-              <span class="lang-tag">Python/Flask</span>
-              <span class="tool-tag">PostgreSQL</span>
-            </div>
-          </div>
-          
-          <div class="project-body">
-            <p class="project-desc">
-              Custom search engine with intelligent ranking algorithms
-              and secure authentication system.
-            </p>
-            
-            <div class="project-features">
-              <div class="feature">
-                <i class="fas fa-search-plus"></i>
-                <span>Multi-platform Search</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-fingerprint"></i>
-                <span>RBAC Authentication</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-footer">
-            <a href="https://lnkd.in/eb4AKVJ4" class="cta-button">
-              <i class="fas fa-external-link-alt"></i>
-              Live Demo
-            </a>
-          </div>
+    </div>
+    <div class="project-body">
+        <p class="project-desc">
+            Advanced network analysis tool combining packet sniffing and 
+            vulnerability scanning capabilities. Features real-time protocol 
+            analysis and threat detection.
+        </p>
+        <div class="tech-stack">
+            <i class="fab fa-python"></i>
+            <i class="fas fa-terminal"></i>
+            <i class="fas fa-shield-alt"></i>
         </div>
-      </div>
-  </main>
-
-  <script src="js/script.js"></script>
-</body>
-</html>
+        <div class="project-diagram">
+            <img src="assets/images/netsnoop-flow.svg" alt="NetSnoop Architecture">
+        </div>
+    </div>
+    <div class="ctf-trophies">
+        <div class="ctf-card">
+            <div class="ctf-rank first-place">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h4>National Cyber League 2023</h4>
+            <p>Top 5% in Packet Analysis Challenge</p>
+            <div class="ctf-skills">
+                <span>Wireshark</span>
+                <span>PCAP Analysis</span>
+                <span>Network Forensics</span>
+            </div>
+        </div>
+    </div>
+</div>

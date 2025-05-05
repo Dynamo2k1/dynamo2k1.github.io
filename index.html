@@ -1,66 +1,73 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rana Uzair | CyberSec Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Rana Uzair | Purple Team Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <canvas class="matrix-bg" id="matrix"></canvas>
-  
-  <header class="terminal-header">
-    <h1>> Rana_Uzair@cyberspace:~$ portfolio --activate</h1>
-    <div id="typewriter">
-      <p>> Initializing cyber defense protocols...</p>
-      <p>> Loading 0xDEADBEEF...</p>
-      <p>> Access granted!</p>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- Bio Card Section -->
-    <section class="bio-card">
-      <div class="glitch-container">
-        <h1 data-text="Rana_Uzair@cyberspace:~">Rana_Uzair@cyberspace:~</h1>
-      </div>
-      
-      <div class="bio-content">
-        <h2>// Cyber Security Specialist</h2>
-        <p class="matrix-text">
-          > Threat Hunter | Digital Forensics Expert | CTF Champion<br>
-          > 4th Semester BS Cyber Security @ Air University<br>
-          > OSCP | eJPT | CCNA Security Certified<br>
-          > Code: <span class="neon-cyan">Python/C++/Bash</span><br>
-          > Tools: <span class="hacker-orange">Wireshark · Metasploit · Burp Suite</span>
-        </p>
-        
-        <div class="skill-grid">
-          <div class="skill-category">
-            <h3>Offensive Security</h3>
-            <div class="skill-chip">Penetration Testing</div>
-            <div class="skill-chip">Reverse Engineering</div>
-            <div class="skill-chip">Binary Exploitation</div>
-          </div>
-          
-          <div class="skill-category">
-            <h3>Defensive Security</h3>
-            <div class="skill-chip">SOC Operations</div>
-            <div class="skill-chip">Network Forensics</div>
-            <div class="skill-chip">Malware Analysis</div>
-          </div>
+    <div class="cyber-loader"></div>
+    
+    <!-- Header Section -->
+    <header class="purple-header">
+        <div class="hacker-terminal">
+            <div class="glitch-text" data-text="Cyber_Guardian_v2.0">Cyber_Guardian_v2.0</div>
+            <div class="matrix-rain"></div>
+            <div class="purple-team-badge">
+                <span class="red-team">RED</span>
+                <span class="purple-glow">+</span>
+                <span class="blue-team">BLUE</span>
+            </div>
         </div>
-      </div>
+    </header>
+
+    <!-- Bio Section -->
+    <section class="cyber-bio">
+        <div class="hologram-card">
+            <div class="holo-effect"></div>
+            <div class="bio-content">
+                <h2 class="cyber-title">Rana Uzair Ahmad</h2>
+                <p class="cyber-subtitle">Penetration Tester | SOC Analyst | CTF Player</p>
+                <div class="split-panel">
+                    <div class="offensive-panel">
+                        <h3><i class="fas fa-crosshairs"></i> Offensive Arsenal</h3>
+                        <ul>
+                            <li>Network Penetration Testing</li>
+                            <li>Web App Security Assessment</li>
+                            <li>Reverse Engineering</li>
+                        </ul>
+                    </div>
+                    <div class="defensive-panel">
+                        <h3><i class="fas fa-shield-alt"></i> Defensive Fortifications</h3>
+                        <ul>
+                            <li>SIEM Configuration</li>
+                            <li>Digital Forensics</li>
+                            <li>Incident Response</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- GitHub Activity -->
-    <section id="github-feed">
-      <h2>// Live GitHub Activity</h2>
-      <div id="repos"></div>
+    <!-- Skills Grid -->
+    <section class="cyber-skills">
+        <h2 class="section-title">Cyber Toolkit <span class="blinking-cursor">_</span></h2>
+        <div class="skill-grid">
+            <div class="skill-card" data-skill="pentest">
+                <i class="fas fa-bug"></i>
+                <h4>Penetration Testing</h4>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 90%"></div>
+                </div>
+            </div>
+            <!-- Add other skills from resume -->
+        </div>
     </section>
 
-  </main>
-
-  <script src="js/script.js"></script>
+    <!-- Add other sections -->
 </body>
 </html>
