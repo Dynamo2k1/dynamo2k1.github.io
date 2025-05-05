@@ -42,6 +42,11 @@ body {
 }
 
 /* Custom cursor container */
+html, * {
+  cursor: none !important;
+}
+
+/* Enhanced Cyber Cursor */
 .custom-cursor {
   position: fixed;
   pointer-events: none;
@@ -49,6 +54,11 @@ body {
   mix-blend-mode: exclusion;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 5px var(--matrix-green));
+  display: none; /* Hidden by default */
+}
+
+body.cursor-loaded .custom-cursor {
+  display: block; /* Only show after JS loads */
 }
 
 .cursor-outer {
@@ -112,6 +122,21 @@ body {
   transform: translateY(-50%);
 }
 
+/* Cursor Trail Elements */
+.cursor-trail {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cyber-purple);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease-out;
+  mix-blend-mode: screen;
+  filter: blur(1px);
+  opacity: 0;
+}
+
 /* Animations */
 @keyframes cursorOuterPulse {
   0%, 100% { transform: scale(1); opacity: 0.8; }
@@ -128,51 +153,6 @@ body {
   0% { transform: scale(1); opacity: 1; }
   50% { transform: scale(0.5); opacity: 0.5; }
   100% { transform: scale(1); opacity: 1; }
-}
-
-/* Different cursor states */
-.custom-cursor.click-active {
-  animation: cursorClick 0.3s ease-out;
-}
-
-.custom-cursor.hover-link {
-  transform: scale(1.5);
-}
-
-.custom-cursor.hover-text {
-  .cursor-inner {
-    background-color: var(--neon-cyan);
-    box-shadow: 0 0 15px var(--neon-cyan);
-  }
-  .cursor-outer {
-    border-color: var(--neon-cyan);
-    box-shadow: 0 0 20px var(--neon-cyan);
-  }
-}
-
-.custom-cursor.hover-button {
-  .cursor-inner {
-    background-color: var(--cyber-yellow);
-    box-shadow: 0 0 15px var(--cyber-yellow);
-  }
-  .cursor-outer {
-    border-color: var(--cyber-yellow);
-    box-shadow: 0 0 20px var(--cyber-yellow);
-  }
-}
-
-
-.cursor-trail {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--cyber-purple);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: all 0.1s ease-out;
-  mix-blend-mode: screen;
-  filter: blur(1px);
 }
 
 /*---------*/
