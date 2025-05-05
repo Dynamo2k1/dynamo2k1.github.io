@@ -327,8 +327,8 @@ a:hover, button:hover, .clickable:hover {
 
 .cyber-nav {
   position: absolute;        /* Position relative to nearest positioned ancestor */
-  top: 40px;                   /* Align to top */
-  right: 20px;                 /* Align to right */
+  top: 20px;                   /* Align to top */
+  right: 5px;                 /* Align to right */
   width: auto;              /* Adjust width as needed */
   padding: 10px 20px;       /* Optional padding for spacing */
 }
