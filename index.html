@@ -1,14 +1,44 @@
-<!-- Add terminal typing effect -->
-<div class="matrix-terminal">
-    <div id="typewriter">
-      > Initializing CyberPortfolio_v2.0...<br>
-      > Loading Security Protocols...<br>
-      > Access Granted: Welcome Rana_Uzair
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rana Uzair | CyberSec Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas class="matrix-bg" id="matrix"></canvas>
   
-  <!-- Add GitHub activity feed using GitHub API -->
-  <div class="github-feed">
-    <h2>// Latest Code Commits</h2>
-    <div id="github-activity"></div>
-  </div>
+  <header class="terminal-header">
+    <h1>> Rana_Uzair@cyberspace:~$ portfolio --activate</h1>
+    <div id="typewriter">
+      <p>> Initializing cyber defense protocols...</p>
+      <p>> Loading 0xDEADBEEF...</p>
+      <p>> Access granted!</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="github-feed">
+      <h2>// Live GitHub Activity</h2>
+      <div id="repos"></div>
+    </section>
+
+    <section id="skills">
+      <h2>// Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Offensive Security</h3>
+          <ul>
+            <li>Penetration Testing</li>
+            <li>Ethical Hacking</li>
+            <li>Vulnerability Research</li>
+          </ul>
+        </div>
+        <!-- Add more skill categories -->
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

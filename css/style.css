@@ -1,16 +1,76 @@
-/* Hacker Theme */
+/* Hacker Theme Base */
+:root {
+  --neon-green: #0f0;
+  --neon-cyan: #0ff;
+  --matrix-green: #20c20e;
+  --bg-black: #000;
+}
+
 body {
-  background: #000;
-  color: #0f0;
-  font-family: 'Consolas', monospace;
+  background-color: var(--bg-black);
+  color: var(--neon-green);
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
 }
 
-.glow-border {
-  border: 1px solid #0f0;
-  box-shadow: 0 0 10px #0f0;
+/* Terminal Effects */
+.terminal-header {
+  border: 2px solid var(--neon-green);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes matrix-fall {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 100%; }
+.terminal-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(15, 255, 15, 0.4),
+    transparent
+  );
+  animation: scan 6s infinite;
+}
+
+@keyframes scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Project Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background: #001100;
+  border: 1px solid var(--neon-green);
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Matrix Rain Effect */
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  pointer-events: none;
 }
