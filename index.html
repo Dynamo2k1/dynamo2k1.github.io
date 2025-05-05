@@ -1,73 +1,136 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rana Uzair | Purple Team Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rana Uzair | Cyber Security Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="cyber-loader"></div>
+    <!-- Matrix Background -->
+    <canvas id="matrix"></canvas>
     
-    <!-- Header Section -->
-    <header class="purple-header">
-        <div class="hacker-terminal">
-            <div class="glitch-text" data-text="Cyber_Guardian_v2.0">Cyber_Guardian_v2.0</div>
-            <div class="matrix-rain"></div>
-            <div class="purple-team-badge">
-                <span class="red-team">RED</span>
-                <span class="purple-glow">+</span>
-                <span class="blue-team">BLUE</span>
+    <!-- Terminal Loader -->
+    <div class="terminal-loader">
+        <div class="terminal-header">
+            <div class="terminal-title">SYSTEM BOOT</div>
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
             </div>
         </div>
-    </header>
+        <div class="terminal-content">
+            <p>> Initializing cyber security protocols...</p>
+            <p>> Loading 0xDEFCON modules...</p>
+            <p>> Establishing secure connection...</p>
+        </div>
+    </div>
 
-    <!-- Bio Section -->
-    <section class="cyber-bio">
-        <div class="hologram-card">
-            <div class="holo-effect"></div>
-            <div class="bio-content">
-                <h2 class="cyber-title">Rana Uzair Ahmad</h2>
-                <p class="cyber-subtitle">Penetration Tester | SOC Analyst | CTF Player</p>
-                <div class="split-panel">
-                    <div class="offensive-panel">
-                        <h3><i class="fas fa-crosshairs"></i> Offensive Arsenal</h3>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="cyber-header">
+            <div class="glitch-container">
+                <h1 class="glitch" data-text="RANA_UZAIR">RANA_UZAIR</h1>
+                <h2 class="cyber-subtitle">CYBER SECURITY SPECIALIST</h2>
+            </div>
+            <div class="cyber-nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> HOME</a></li>
+                        <li><a href="projects.html"><i class="fas fa-code"></i> PROJECTS</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> CERTS</a></li>
+                        <li><a href="contact.html"><i class="fas fa-terminal"></i> CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="cyber-main">
+            <!-- Bio Section -->
+            <section class="cyber-bio">
+                <div class="bio-card">
+                    <div class="bio-image">
+                        <img src="assets/images/profile-pic.jpg" alt="Rana Uzair">
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="bio-content">
+                        <h3><i class="fas fa-user-secret"></i> BIO</h3>
+                        <p>> 4th Semester BS Cyber Security @ Air University</p>
+                        <p>> SOC Analyst @ National Center of Cyber Security</p>
+                        <p>> CTF Player & Security Researcher</p>
+                        <div class="cyber-tags">
+                            <span class="tag red">Penetration Testing</span>
+                            <span class="tag blue">Digital Forensics</span>
+                            <span class="tag purple">Reverse Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="cyber-skills">
+                <h3><i class="fas fa-laptop-code"></i> SKILL MATRIX</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>OFFENSIVE</h4>
                         <ul>
-                            <li>Network Penetration Testing</li>
-                            <li>Web App Security Assessment</li>
-                            <li>Reverse Engineering</li>
+                            <li><i class="fas fa-bug"></i> Penetration Testing</li>
+                            <li><i class="fas fa-crosshairs"></i> Ethical Hacking</li>
+                            <li><i class="fas fa-lock-open"></i> Cryptanalysis</li>
                         </ul>
                     </div>
-                    <div class="defensive-panel">
-                        <h3><i class="fas fa-shield-alt"></i> Defensive Fortifications</h3>
+                    <div class="skill-category">
+                        <h4>DEFENSIVE</h4>
                         <ul>
-                            <li>SIEM Configuration</li>
-                            <li>Digital Forensics</li>
-                            <li>Incident Response</li>
+                            <li><i class="fas fa-shield-alt"></i> SOC Operations</li>
+                            <li><i class="fas fa-search"></i> Digital Forensics</li>
+                            <li><i class="fas fa-virus"></i> Malware Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>DEVELOPMENT</h4>
+                        <ul>
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fas fa-copyright"></i> C++</li>
+                            <li><i class="fas fa-terminal"></i> Bash</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Skills Grid -->
-    <section class="cyber-skills">
-        <h2 class="section-title">Cyber Toolkit <span class="blinking-cursor">_</span></h2>
-        <div class="skill-grid">
-            <div class="skill-card" data-skill="pentest">
-                <i class="fas fa-bug"></i>
-                <h4>Penetration Testing</h4>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 90%"></div>
+            <!-- GitHub Feed -->
+            <section class="github-feed">
+                <h3><i class="fab fa-github"></i> LATEST COMMITS</h3>
+                <div id="github-activity" class="terminal-box">
+                    <div class="terminal-header">
+                        <span>GIT LOG</span>
+                    </div>
+                    <div class="terminal-content" id="github-content">
+                        > Fetching GitHub activity...
+                    </div>
                 </div>
-            </div>
-            <!-- Add other skills from resume -->
-        </div>
-    </section>
+            </section>
+        </main>
 
-    <!-- Add other sections -->
+        <!-- Footer -->
+        <footer class="cyber-footer">
+            <div class="social-links">
+                <a href="https://github.com/dynamo2k1" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">© 2023 Rana Uzair | All systems operational</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/matrix.js"></script>
+    <script src="assets/js/github.js"></script>
+    <script src="assets/js/terminal.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
