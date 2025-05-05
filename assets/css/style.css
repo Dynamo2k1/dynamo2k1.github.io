@@ -169,6 +169,36 @@ body {
   animation: pulse 2s infinite;
 }
 
+/* ul styling*/
+.cyber-nav ul {
+  list-style: none;          /* Remove bullet points */
+  margin: 0;                 /* Remove default margin */
+  padding: 0;                /* Remove default padding */
+  display: flex;             /* Arrange list items horizontally */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;       /* Vertically center items */
+}
+
+.cyber-nav {
+  position: absolute;        /* Position relative to nearest positioned ancestor */
+  top: 0;                   /* Align to top */
+  right: 0;                 /* Align to right */
+  width: auto;              /* Adjust width as needed */
+  padding: 10px 20px;       /* Optional padding for spacing */
+}
+
+.cyber-nav ul li {
+  margin-left: 20px;         /* Space between menu items */
+}
+
+.cyber-nav ul li a {
+  text-decoration: none;     /* Remove underline */
+  color: inherit;            /* Use inherited text color */
+  display: flex;             /* For icon and text alignment */
+  align-items: center;
+}
+
+
 /* Skills Grid */
 .skills-grid {
   display: grid;
