@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rana Uzair | Contact</title>
-    <meta name="description" content="Contact Rana Uzair | Cyber Security Specialist">
+    <title>Contact Rana Uzair | Cyber Security Specialist</title>
+    <meta name="description" content="Contact Rana Uzair - Cyber Security Specialist and SOC Analyst">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <canvas id="matrix"></canvas>
-    <div id="particles-js"></div>
     
     <div class="container">
         <header class="cyber-header">
             <div class="glitch-container">
-                <h1 class="glitch" data-text="CONTACT">CONTACT</h1>
-                <h2 class="cyber-subtitle">SECURE COMMUNICATION</h2>
+                <h1 class="glitch" data-text="CONTACT_ME">CONTACT_ME</h1>
+                <h2 class="cyber-subtitle">SECURE COMMUNICATION CHANNEL</h2>
             </div>
             <div class="cyber-nav">
                 <nav>
@@ -35,47 +34,52 @@
         <main class="cyber-main">
             <div class="cyber-box">
                 <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3><i class="fas fa-envelope"></i> ENCRYPTED MESSAGE</h3>
-                        <form id="contact-form">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h2><i class="fas fa-paper-plane"></i> SEND ENCRYPTED MESSAGE</h2>
+                        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
                             <div class="form-group">
                                 <label for="name">YOUR NAME</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="email">YOUR EMAIL</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="subject">SUBJECT</label>
                                 <input type="text" id="subject" name="subject" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="message">MESSAGE</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <textarea id="message" name="message" required></textarea>
                             </div>
+                            
                             <div class="form-group">
-                                <label>
-                                    <input type="checkbox" name="encrypt" checked>
-                                    Encrypt with PGP
-                                </label>
+                                <button type="submit" class="cyber-button">
+                                    <i class="fas fa-lock"></i> ENCRYPT & SEND
+                                </button>
                             </div>
-                            <button type="submit" class="cyber-button">
-                                <i class="fas fa-lock"></i> SEND SECURELY
-                            </button>
+                            
+                            <div id="formStatus"></div>
                         </form>
                     </div>
                     
+                    <!-- Contact Information -->
                     <div class="contact-info">
-                        <h3><i class="fas fa-network-wired"></i> CONNECT</h3>
+                        <h2><i class="fas fa-network-wired"></i> CONNECTION POINTS</h2>
+                        
                         <ul>
                             <li>
                                 <i class="fab fa-github"></i>
-                                <a href="https://github.com/dynamo2k1" target="_blank">github.com/dynamo2k1</a>
+                                <a href="https://github.com/Dynamo2k1" target="_blank">github.com/Dynamo2k1</a>
                             </li>
                             <li>
                                 <i class="fab fa-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/rana-uzair-82b8b6223/" target="_blank">linkedin.com/in/rana-uzair</a>
+                                <a href="https://linkedin.com/in/rana-uzair-82b8b6223/" target="_blank">linkedin.com/in/rana-uzair</a>
                             </li>
                             <li>
                                 <i class="fas fa-envelope"></i>
@@ -83,16 +87,16 @@
                             </li>
                             <li>
                                 <i class="fas fa-phone"></i>
-                                +92 344 5001600
+                                <span>+92 344 5001600</span>
                             </li>
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                Islamabad, Pakistan
+                                <span>Islamabad, Pakistan</span>
                             </li>
                         </ul>
                         
                         <div class="pgp-key">
-                            <h4><i class="fas fa-key"></i> PGP PUBLIC KEY</h4>
+                            <h3><i class="fas fa-key"></i> PGP PUBLIC KEY</h3>
                             <div class="terminal-box">
                                 <div class="terminal-header">
                                     <span>PGP KEY</span>
@@ -102,12 +106,12 @@
                                     > -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
                                     > Version: GnuPG v2.0.22 (GNU/Linux)<br>
                                     > <br>
-                                    > mQENBF4wBkYBCAD...<br>
+                                    > mQENBF4wBkYBCAD... [your actual PGP key here]<br>
                                     > -----END PGP PUBLIC KEY BLOCK-----
                                 </div>
                             </div>
-                            <a href="#" class="cyber-button" style="margin-top: 1rem;">
-                                <i class="fas fa-download"></i> Download Public Key
+                            <a href="assets/pgp/key.asc" download class="cyber-button">
+                                <i class="fas fa-download"></i> DOWNLOAD PUBLIC KEY
                             </a>
                         </div>
                     </div>
@@ -127,7 +131,35 @@
     </div>
 
     <script src="assets/js/matrix.js"></script>
-    <script src="assets/js/terminal.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        // Form submission handler
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            status.innerHTML = '<p class="sending"><i class="fas fa-spinner fa-spin"></i> Encrypting and sending message...</p>';
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    status.innerHTML = '<p class="success"><i class="fas fa-check"></i> Message sent successfully!</p>';
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                status.innerHTML = '<p class="error"><i class="fas fa-exclamation-triangle"></i> There was a problem sending your message. Please try again or email directly.</p>';
+            });
+        });
+    </script>
 </body>
 </html>
