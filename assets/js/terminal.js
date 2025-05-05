@@ -1,62 +1,65 @@
-// Cyber Terminal Loader
 document.addEventListener('DOMContentLoaded', function() {
-    const terminalLoader = document.querySelector('.terminal-loader');
-    const terminalContent = document.querySelector('.terminal-content');
-    
-    // Boot sequence messages
-    const bootMessages = [
-      "Initializing cyber security protocols...",
-      "Loading 0xDEFCON modules...",
-      "Mounting encrypted partitions...",
-      "Establishing secure connection...",
-      "Verifying PGP keys...",
-      "Scanning for intrusions...",
-      "System fully operational"
-    ];
-    
-    // Simulate system boot
-    function typeWriter(text, index, callback) {
-      if (index < text.length) {
-        terminalContent.innerHTML += text.charAt(index);
-        setTimeout(() => typeWriter(text, index + 1, callback), 20);
-      } else {
-        setTimeout(callback, 500);
-      }
+  const terminalLoader = document.querySelector('.terminal-loader');
+  const terminalContent = document.querySelector('.terminal-content');
+
+  const bootMessages = [
+    "Initializing cyber security protocols...",
+    "Loading 0xDEFCON modules...",
+    "Mounting encrypted partitions...",
+    "Establishing secure connection...",
+    "Verifying PGP keys...",
+    "Scanning for intrusions...",
+    "System fully operational"
+  ];
+
+  // typeWriter now receives the line element and updates its content
+  function typeWriter(text, index, lineElement, callback) {
+    if (index < text.length) {
+      lineElement.textContent = lineElement.textContent + text.charAt(index);
+      setTimeout(() => typeWriter(text, index + 1, lineElement, callback), 20);
+    } else {
+      setTimeout(callback, 500);
     }
-    
-    function displayMessages(messages, index) {
-      if (index < messages.length) {
-        terminalContent.innerHTML += `<p>> `;
-        typeWriter(messages[index], 0, () => {
-          terminalContent.scrollTop = terminalContent.scrollHeight;
-          displayMessages(messages, index + 1);
-        });
-      } else {
+  }
+
+  function displayMessages(messages, index) {
+    if (index < messages.length) {
+      // Create a new <p> element for each line
+      const line = document.createElement('p');
+      line.textContent = '> ';  // Prompt symbol
+      terminalContent.appendChild(line);
+
+      // Start typing inside this line
+      typeWriter(messages[index], 0, line, () => {
+        terminalContent.scrollTop = terminalContent.scrollHeight;
+        displayMessages(messages, index + 1);
+      });
+    } else {
+      setTimeout(() => {
+        terminalLoader.style.opacity = '0';
         setTimeout(() => {
-          terminalLoader.style.opacity = '0';
-          setTimeout(() => {
-            terminalLoader.style.display = 'none';
-          }, 1000);
+          terminalLoader.style.display = 'none';
         }, 1000);
-      }
+      }, 1000);
     }
-    
-    // Start the boot sequence
-    displayMessages(bootMessages, 0);
-    
-    // Add blinking cursor effect
-    setInterval(() => {
-      const lastLine = terminalContent.lastElementChild;
-      if (lastLine) {
-        const cursor = document.createElement('span');
+  }
+
+  // Start the boot sequence
+  displayMessages(bootMessages, 0);
+
+  // Blinking cursor effect on the last line
+  setInterval(() => {
+    const lastLine = terminalContent.lastElementChild;
+    if (lastLine) {
+      let cursor = lastLine.querySelector('.blinking-cursor');
+      if (cursor) {
+        cursor.remove();
+      } else {
+        cursor = document.createElement('span');
         cursor.className = 'blinking-cursor';
         cursor.textContent = '_';
-        
-        if (lastLine.querySelector('.blinking-cursor')) {
-          lastLine.removeChild(lastLine.querySelector('.blinking-cursor'));
-        } else {
-          lastLine.appendChild(cursor);
-        }
+        lastLine.appendChild(cursor);
       }
-    }, 500);
-  });
+    }
+  }, 500);
+});
