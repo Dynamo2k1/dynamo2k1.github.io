@@ -42,37 +42,25 @@ body {
 }
 
 /* Custom cursor container */
+/* ===== Cursor Core Styles ===== */
 html, * {
   cursor: none !important;
 }
 
-/* Enhanced Cyber Cursor */
 .custom-cursor {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: exclusion;
   transform: translate(-50%, -50%);
-  filter: drop-shadow(0 0 5px var(--matrix-green));
-  display: none; /* Hidden by default */
+  display: none;
 }
 
 body.cursor-loaded .custom-cursor {
-  display: block; /* Only show after JS loads */
+  display: block;
 }
 
-.cursor-outer {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--matrix-green);
-  border-radius: 50%;
-  position: absolute;
-  animation: cursorOuterPulse 2.5s infinite ease-out;
-  box-shadow: 0 0 15px var(--matrix-green),
-              inset 0 0 10px var(--matrix-green);
-}
-
-.cursor-inner {
+/* ===== Cursor Elements ===== */
+.cursor-core {
   width: 8px;
   height: 8px;
   background-color: var(--cyber-red);
@@ -82,77 +70,104 @@ body.cursor-loaded .custom-cursor {
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px var(--cyber-red);
+  transition: transform 0.1s ease-out;
+}
+
+.cursor-outer-ring {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--matrix-green);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 15px var(--matrix-green);
+  transition: all 0.2s ease-out;
 }
 
 .cursor-halo {
-  position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border: 1px dashed var(--cyber-blue);
   border-radius: 50%;
-  animation: cursorHaloRotate 8s linear infinite;
+  position: absolute;
+  animation: halo-rotate 15s linear infinite;
   opacity: 0.7;
 }
 
-.cursor-crosshair {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-}
-
-.cursor-crosshair::before,
-.cursor-crosshair::after {
-  content: '';
-  position: absolute;
-  background-color: var(--cyber-purple);
-  box-shadow: 0 0 5px var(--cyber-purple);
-}
-
-.cursor-crosshair::before {
-  width: 2px;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cursor-crosshair::after {
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Cursor Trail Elements */
+/* ===== Trail Elements ===== */
 .cursor-trail {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--cyber-purple);
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: all 0.1s ease-out;
   mix-blend-mode: screen;
   filter: blur(1px);
   opacity: 0;
+  transition: 
+    transform 0.2s ease-out,
+    opacity 0.2s ease-out,
+    width 0.2s ease-out,
+    height 0.2s ease-out;
 }
 
-/* Animations */
-@keyframes cursorOuterPulse {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.3); opacity: 0.4; }
+/* ===== Text Selection Effect ===== */
+::selection {
+  background: var(--matrix-green);
+  color: black;
 }
 
-@keyframes cursorHaloRotate {
+.text-select-effect {
+  position: absolute;
+  background: rgba(32, 194, 14, 0.3);
+  border-radius: 2px;
+  z-index: 9998;
+  pointer-events: none;
+  transform-origin: left center;
+  animation: textSelectPulse 0.5s ease-out;
+}
+
+/* ===== Animations ===== */
+@keyframes halo-rotate {
   from { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(0.8); }
   to { transform: rotate(360deg) scale(1); }
 }
 
+@keyframes textSelectPulse {
+  0% { transform: scaleX(0); opacity: 0; }
+  50% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0); opacity: 0; }
+}
+
 @keyframes cursorClick {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(0.5); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 1; }
+  0% { transform: scale(1); }
+  50% { transform: scale(0.7); }
+  100% { transform: scale(1); }
+}
+
+/* ===== State Variations ===== */
+.custom-cursor.click-active {
+  animation: cursorClick 0.3s ease-out;
+}
+
+.custom-cursor.hover-link .cursor-core {
+  background-color: var(--neon-cyan);
+  box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+.custom-cursor.hover-text .cursor-outer-ring {
+  transform: scale(1.3);
+  border-color: var(--cyber-yellow);
+}
+
+.custom-cursor.selecting-text .cursor-core {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.custom-cursor.selecting-text .cursor-outer-ring {
+  transform: scale(0.8);
+  opacity: 0.7;
 }
 
 /*---------*/
