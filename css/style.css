@@ -1,76 +1,74 @@
-/* Hacker Theme Base */
+
+**2. Updated CSS Theme (style.css)** :cite[5]:cite[10]
+```css
+/* Cyber Theme 2.0 */
 :root {
-  --neon-green: #0f0;
-  --neon-cyan: #0ff;
-  --matrix-green: #20c20e;
-  --bg-black: #000;
+  --matrix-green: #00ff00;
+  --neon-cyan: #00ffff;
+  --cyber-purple: #bc13fe;
+  --hacker-orange: #ff5f1f;
+  --terminal-bg: #0a0a0a;
 }
 
 body {
-  background-color: var(--bg-black);
-  color: var(--neon-green);
-  font-family: 'Courier New', monospace;
-  line-height: 1.6;
+  background: var(--terminal-bg);
+  color: #fff;
+  font-family: 'Courier New', 'Cyber', monospace;
 }
 
-/* Terminal Effects */
-.terminal-header {
-  border: 2px solid var(--neon-green);
-  padding: 20px;
+/* Glowing Headers */
+h1, h2 {
+  text-shadow: 0 0 10px var(--neon-cyan);
+  color: var(--matrix-green);
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyber-purple), var(--hacker-orange));
+}
+
+/* Bio Card */
+.bio-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--matrix-green);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
 }
 
-.terminal-header::before {
+.bio-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(15, 255, 15, 0.4),
-    transparent
-  );
-  animation: scan 6s infinite;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent, 
+    var(--neon-cyan),
+    transparent);
+  animation: scan 6s infinite linear;
 }
 
-@keyframes scan {
-  0% { left: -100%; }
-  100% { left: 100%; }
+/* Skill Chips */
+.skill-chip {
+  background: #001a1a;
+  border: 1px solid var(--neon-cyan);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  transition: all 0.3s;
 }
 
-/* Project Grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.project-card {
-  background: #001100;
-  border: 1px solid var(--neon-green);
-  padding: 1.5rem;
-  position: relative;
-  transition: transform 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px var(--neon-green);
-}
-
-/* Matrix Rain Effect */
-.matrix-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.1;
-  pointer-events: none;
+.skill-chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--neon-cyan);
 }
