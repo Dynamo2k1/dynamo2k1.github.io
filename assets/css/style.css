@@ -135,7 +135,7 @@ a:hover, button:hover, .clickable:hover {
 /* target the H1 in your header */
 .cyber-header h1 {
   font-family: 'Cyberway', sans-serif;
-  font-size: 8rem;           /* ↑ bump this up as needed */
+  font-size: 5rem;           /* ↑ bump this up as needed */
   color: var(--cyber-red);
   text-shadow: 0 0 15px var(--cyber-red);
   margin: 3rem 0;
