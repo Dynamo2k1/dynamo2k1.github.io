@@ -1,6 +1,5 @@
 @import url('./components/animations.css');
 @import url('./components/cards.css');
-@import url('./components/navigation.css');
 @import url('./components/terminal.css');
 @import url('./components/projects.css');
 @import url('./components/certifications.css');
@@ -28,17 +27,6 @@
     rgba(255, 0, 60, 0) 0%, 
     rgba(255, 0, 60, 0.3) 50%, 
     rgba(255, 0, 60, 0) 100%); 
-}
-@font-face {
-  font-family: 'Cyberway';
-  src: url('../fonts/Cyberway.ttf') format('truetype');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'MonoSpaceBold';
-  src: url('../fonts/MonoSpaceBold.ttf') format('truetype');
-  font-display: swap;
 }
 
 body {

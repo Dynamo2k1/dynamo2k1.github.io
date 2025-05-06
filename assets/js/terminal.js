@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function displayMessages(messages, index) {
     if (index < messages.length) {
       const line = document.createElement('p');
-      line.textContent = '> ';  
+      line.textContent = ' ';  
       terminalContent.appendChild(line);
 
       typeWriter(messages[index], 0, line, () => {
