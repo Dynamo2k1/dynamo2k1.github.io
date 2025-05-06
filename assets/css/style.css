@@ -491,39 +491,39 @@ a:hover, button:hover, .clickable:hover {
 }
 
 /* Footer */
-
-/* ===== Dynamic Cyber Footer ===== */
+/* ===== Cyber Footer Styles ===== */
 .cyber-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   background: linear-gradient(to top, rgba(10, 20, 10, 0.9), rgba(0, 0, 0, 0.7));
   backdrop-filter: blur(5px);
   border-top: 1px solid var(--matrix-green);
   box-shadow: 0 -5px 20px rgba(32, 194, 14, 0.3);
-  padding: 20px 0;
-  margin-top: auto; /* Pushes footer to bottom */
+  padding: 15px 0;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-/* Make sure body and html take full height */
-html, body {
-  height: 100%;
+.cyber-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--matrix-green), 
+    transparent);
+  box-shadow: 0 0 10px var(--matrix-green);
+  animation: scanline 3s linear infinite;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  flex: 1 0 auto; /* Allows container to grow */
-}
-
-/* Keep all the other cyberpunk effects from previous version */
 .social-links {
   display: flex;
   gap: 25px;
@@ -615,22 +615,6 @@ body {
   100% { background-position: 200% 50%; }
 }
 
-/* Scanline animation */
-.cyber-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    var(--matrix-green), 
-    transparent);
-  box-shadow: 0 0 10px var(--matrix-green);
-  animation: scanline 3s linear infinite;
-}
-
 @keyframes scanline {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
@@ -652,7 +636,6 @@ body {
     font-size: 12px;
   }
 }
-
 
 @import url('components/_animations.css');
 @import url('components/_cards.css');
