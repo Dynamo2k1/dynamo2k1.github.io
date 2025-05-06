@@ -1,72 +1,97 @@
-/* Cyber Animations */
+/* ===== MATRIX BACKGROUND ===== */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+/* ===== GLITCH EFFECTS ===== */
+.glitch {
+  position: relative;
+  font-family: 'Cyberway', sans-serif;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--cyber-red);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--cyber-blue);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
 @keyframes glitch {
-  0% {
-    text-shadow: 2px 0 var(--hacker-red), -2px 0 var(--neon-cyan);
-    transform: translate(0);
-  }
-  20% {
-    text-shadow: 3px 0 var(--hacker-red), -3px 0 var(--neon-cyan);
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    text-shadow: 2px 0 var(--cyber-purple), -2px 0 var(--cyber-yellow);
-    transform: translate(0);
-  }
-  60% {
-    text-shadow: 3px 0 var(--cyber-purple), -3px 0 var(--cyber-yellow);
-    transform: translate(2px, -2px);
-  }
-  80% {
-    text-shadow: 2px 0 var(--hacker-red), -2px 0 var(--neon-cyan);
-    transform: translate(0);
-  }
-  100% {
-    text-shadow: 3px 0 var(--hacker-red), -3px 0 var(--neon-cyan);
-    transform: translate(-2px, 2px);
-  }
+  0% { text-shadow: 2px 0 var(--cyber-red), -2px 0 var(--cyber-blue); }
+  20% { text-shadow: 3px 0 var(--cyber-red), -3px 0 var(--cyber-blue); }
+  40% { text-shadow: 2px 0 var(--cyber-purple), -2px 0 var(--cyber-yellow); }
+  60% { text-shadow: 3px 0 var(--cyber-purple), -3px 0 var(--cyber-yellow); }
+  80% { text-shadow: 2px 0 var(--cyber-red), -2px 0 var(--cyber-blue); }
+  100% { text-shadow: 3px 0 var(--cyber-red), -3px 0 var(--cyber-blue); }
 }
 
+@keyframes glitch-anim {
+  0% { clip: rect(31px, 9999px, 94px, 0); }
+  10% { clip: rect(112px, 9999px, 76px, 0); }
+  20% { clip: rect(85px, 9999px, 77px, 0); }
+  30% { clip: rect(27px, 9999px, 97px, 0); }
+  40% { clip: rect(64px, 9999px, 98px, 0); }
+  50% { clip: rect(61px, 9999px, 85px, 0); }
+  60% { clip: rect(99px, 9999px, 114px, 0); }
+  70% { clip: rect(34px, 9999px, 115px, 0); }
+  80% { clip: rect(98px, 9999px, 129px, 0); }
+  90% { clip: rect(43px, 9999px, 96px, 0); }
+  100% { clip: rect(82px, 9999px, 64px, 0); }
+}
+
+/* ===== SCANLINE EFFECTS ===== */
 @keyframes scanline {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
 
+@keyframes hologram {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* ===== PULSE EFFECTS ===== */
 @keyframes pulse {
-  0% {
-    opacity: 0.5;
-    box-shadow: 0 0 5px var(--matrix-green);
+  0% { 
+    opacity: 0.5; 
+    box-shadow: 0 0 5px currentColor;
   }
-  50% {
-    opacity: 1;
-    box-shadow: 0 0 20px var(--matrix-green);
+  50% { 
+    opacity: 1; 
+    box-shadow: 0 0 20px currentColor;
   }
-  100% {
-    opacity: 0.5;
-    box-shadow: 0 0 5px var(--matrix-green);
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
+  100% { 
+    opacity: 0.5; 
+    box-shadow: 0 0 5px currentColor;
   }
 }
 
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-  }
-  20%, 22%, 24%, 55% {
-    opacity: 0.5;
-  }
+/* ===== GRADIENT BORDERS ===== */
+@keyframes gradient-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
