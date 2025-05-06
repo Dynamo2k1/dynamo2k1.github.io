@@ -1,13 +1,15 @@
-/* ===== CORE CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
+/* ===== CYBER CARD BASE ===== */
 .cyber-card {
   background: var(--dark-layer);
   border: 1px solid var(--matrix-green);
-  margin: 2rem 0;
+  border-radius: 4px;
   padding: 2rem;
+  margin: 2rem 0;
   position: relative;
   overflow: hidden;
   box-shadow: var(--cyber-box-shadow);
   transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .cyber-card:hover {
@@ -27,7 +29,12 @@
   animation: scan 6s infinite linear;
 }
 
-/* ===== PROJECT CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
+/* ===== PROJECT CARDS ===== */
+.project-card {
+  composes: cyber-card;
+  border: 1px solid var(--cyber-blue);
+}
+
 .project-card::after {
   content: '';
   position: absolute;
@@ -37,21 +44,119 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(32, 194, 14, 0.1) 0%,
+    rgba(0, 102, 255, 0.1) 0%,
     rgba(0, 0, 0, 0) 50%,
-    rgba(32, 194, 14, 0.1) 100%
+    rgba(0, 102, 255, 0.1) 100%
   );
   pointer-events: none;
 }
 
-
-/* === tags === */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--matrix-green);
+}
 
 .project-tags {
   display: flex;
   gap: 0.5rem;
-} 
+  margin: 1rem 0;
+}
 
+/* ===== CERTIFICATION CARDS ===== */
+.cert-card {
+  composes: cyber-card;
+  border: 1px solid var(--cyber-purple);
+  text-align: center;
+}
+
+.cert-badge {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  background: rgba(188, 19, 254, 0.2);
+  border: 2px solid var(--cyber-purple);
+}
+
+.cert-badge::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+
+.cert-badge.oscp::before {
+  background: rgba(255, 0, 60, 0.4);
+}
+
+.cert-badge.reverse::before {
+  background: rgba(0, 255, 157, 0.4);
+}
+
+/* ===== BIO CARD ===== */
+.bio-card {
+  composes: cyber-card;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.bio-image {
+  width: 250px;
+  height: 250px;
+  border: 3px solid var(--matrix-green);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.bio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--matrix-green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--matrix-green);
+  animation: pulse 2s infinite;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .bio-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .bio-image {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ===== TAGS ===== */
 .cyber-tags {
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +200,7 @@
   border: 1px solid var(--cyber-yellow);
   color: var(--cyber-yellow);
 }
+
 .tag.red {
   background: rgba(255, 0, 60, 0.2);
   border: 1px solid var(--hacker-red);
@@ -111,68 +217,4 @@
   background: rgba(188, 19, 254, 0.2);
   border: 1px solid var(--cyber-purple);
   color: var(--cyber-purple);
-}
-
-/* ===== CERTIFICATION CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
-.cert-badge::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 50%;
-  z-index: -1;
-  animation: pulse 2s infinite;
-}
-
-.cert-badge.oscp::before {
-  background: rgba(255, 0, 60, 0.4);
-}
-
-.cert-badge.reverse::before {
-  background: rgba(0, 255, 157, 0.4);
-}
-
-/* ===== BIO CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
-.bio-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--cyber-gradient);
-  opacity: 0.1;
-  animation: scan 6s infinite linear;
-}
-
-/* ===== TIMELINE STYLES (UNIQUE TO CARDS.CSS) ===== */
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -3px;
-  width: 3px;
-  height: 100%;
-  background: var(--cyber-gradient);
-  animation: scanline 6s linear infinite;
-}
-
-/* ===== CONTACT CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
-.contact-card {
-  background: var(--dark-layer);
-  border: 1px solid var(--matrix-green);
-  padding: 2rem;
-}
-
-/* ===== RESPONSIVE ADJUSTMENTS (UNIQUE TO CARDS.CSS) ===== */
-@media (max-width: 768px) {
-  .bio-card {
-    flex-direction: column;
-  }
-  
-  .bio-image {
-    margin: 0 auto 1rem;
-  }
 }
