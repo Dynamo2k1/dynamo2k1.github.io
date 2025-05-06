@@ -493,7 +493,7 @@ a:hover, button:hover, .clickable:hover {
 /* Footer */
 /* ===== Cyber Footer Styles ===== */
 .cyber-footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
