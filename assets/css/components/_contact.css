@@ -2,165 +2,197 @@
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin: 3rem auto;
-    max-width: 1200px;
-    padding: 0 2rem;
+    gap: 4rem;
+    margin: 4rem auto;
+    max-width: 1400px;
+    padding: 0 3rem;
 }
 
 .contact-form {
-    background: rgba(0, 20, 0, 0.2);
-    border: 1px solid var(--matrix-green);
-    padding: 2.5rem;
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(32, 194, 14, 0.2);
+    background: rgba(0, 20, 0, 0.3);
+    border: 2px solid var(--matrix-green);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(32, 194, 14, 0.3);
     transition: all 0.3s ease;
 }
 
 .contact-form:hover {
-    box-shadow: 0 0 30px rgba(32, 194, 14, 0.4);
+    box-shadow: 0 0 40px rgba(32, 194, 14, 0.5);
+    transform: translateY(-5px);
 }
 
 .contact-form h2 {
     color: var(--neon-cyan);
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
-    border-bottom: 1px dashed var(--matrix-green);
-    padding-bottom: 1rem;
+    border-bottom: 2px dashed var(--matrix-green);
+    padding-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--neon-cyan);
 }
 
 .form-group {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     color: var(--matrix-green);
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--matrix-green);
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--matrix-green);
     color: var(--matrix-green);
     font-family: 'Share Tech Mono', monospace;
     transition: all 0.3s;
-    font-size: 1rem;
-    border-radius: 3px;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
 .form-group input {
-    height: 50px;
+    height: 60px;
 }
 
 .form-group textarea {
-    min-height: 200px;
+    min-height: 250px;
     resize: vertical;
+    line-height: 1.6;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 15px var(--neon-cyan);
+    box-shadow: 0 0 20px var(--neon-cyan);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .cyber-button {
     display: inline-block;
-    padding: 1rem 2rem;
-    background: rgba(32, 194, 14, 0.1);
-    border: 1px solid var(--matrix-green);
+    padding: 1.5rem 3rem;
+    background: rgba(32, 194, 14, 0.2);
+    border: 2px solid var(--matrix-green);
     color: var(--matrix-green);
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: all 0.3s;
     width: 100%;
     text-align: center;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .cyber-button:hover {
-    background: rgba(32, 194, 14, 0.3);
-    box-shadow: 0 0 20px var(--matrix-green);
+    background: rgba(32, 194, 14, 0.4);
+    box-shadow: 0 0 30px var(--matrix-green);
     transform: translateY(-3px);
+    color: black;
+}
+
+.cyber-button i {
+    margin-right: 10px;
 }
 
 #formStatus {
-    margin-top: 1.5rem;
-    padding: 1rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
 #formStatus .sending {
     color: var(--neon-cyan);
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px dashed var(--neon-cyan);
 }
 
 #formStatus .success {
     color: var(--matrix-green);
+    background: rgba(32, 194, 14, 0.1);
+    border: 1px dashed var(--matrix-green);
 }
 
 #formStatus .error {
-    color: var(--hacker-red);
+    color: var(--cyber-red);
+    background: rgba(255, 0, 60, 0.1);
+    border: 1px dashed var(--cyber-red);
 }
 
 /* Contact Info Section */
 .contact-info {
-    background: rgba(0, 20, 0, 0.2);
-    border: 1px solid var(--matrix-green);
-    padding: 2.5rem;
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(32, 194, 14, 0.2);
+    background: rgba(0, 20, 0, 0.3);
+    border: 2px solid var(--matrix-green);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(32, 194, 14, 0.3);
 }
 
 .contact-info h2 {
     color: var(--neon-cyan);
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
-    border-bottom: 1px dashed var(--matrix-green);
-    padding-bottom: 1rem;
+    border-bottom: 2px dashed var(--matrix-green);
+    padding-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--neon-cyan);
 }
 
 .contact-info ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .contact-info li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.1rem;
-    padding: 0.8rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
+    gap: 1.5rem;
+    font-size: 1.3rem;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
     transition: all 0.3s;
+    border-left: 3px solid var(--matrix-green);
 }
 
 .contact-info li:hover {
-    background: rgba(0, 0, 0, 0.5);
-    transform: translateX(5px);
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateX(10px);
+    border-left: 3px solid var(--neon-cyan);
 }
 
 .contact-info i {
-    width: 30px;
-    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 20, 0, 0.5);
+    border-radius: 50%;
     color: var(--neon-cyan);
+    font-size: 1.2rem;
+    border: 1px solid var(--matrix-green);
 }
 
 .contact-info a {
     color: var(--matrix-green);
     text-decoration: none;
     transition: all 0.3s;
+    flex: 1;
 }
 
 .contact-info a:hover {
@@ -171,25 +203,94 @@
 /* PGP Key Section */
 .pgp-key {
     margin-top: 3rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1.5rem;
-    border: 1px solid var(--matrix-green);
-    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border: 2px solid var(--matrix-green);
+    border-radius: 8px;
 }
 
 .pgp-key h3 {
     color: var(--neon-cyan);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.3rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.pgp-key h3 i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 20, 0, 0.5);
+    border-radius: 50%;
+    border: 1px solid var(--matrix-green);
 }
 
 /* Responsive Adjustments */
+@media (max-width: 992px) {
+    .contact-grid {
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+    
+    .contact-form,
+    .contact-info {
+        padding: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .contact-form h2,
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-group label {
+        font-size: 1.1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+    
+    .form-group input {
+        height: 50px;
+    }
+    
+    .form-group textarea {
+        min-height: 200px;
+    }
+    
+    .cyber-button {
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .contact-info li {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    
+    .contact-info i {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-grid {
         padding: 0 1rem;
     }
     
@@ -198,15 +299,8 @@
         padding: 1.5rem;
     }
     
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-    
-    .form-group input {
-        height: 45px;
-    }
-    
-    .form-group textarea {
-        min-height: 180px;
+    .contact-form h2,
+    .contact-info h2 {
+        font-size: 1.5rem;
     }
 }
