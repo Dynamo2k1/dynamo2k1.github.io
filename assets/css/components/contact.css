@@ -1,8 +1,9 @@
 /* ===== ENHANCED CONTACT FORM STYLING ===== */
 .contact-grid {
-    display: grid;
+    display: inline;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    margin-top: 1rem;
     margin: 3rem auto;
     max-width: 1200px;
     padding: 0 2rem;
