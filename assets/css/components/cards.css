@@ -100,44 +100,7 @@
   color: var(--cyber-purple);
 }
 
-
-/* Cert */
-
-.certs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.cert-card {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--matrix-green);
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.cert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px var(--matrix-green);
-}
-
-.cert-badge {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: white;
-  position: relative;
-}
-
+/* ===== CERTIFICATION CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
 .cert-badge::before {
   content: '';
   position: absolute;
@@ -150,58 +113,12 @@
   animation: pulse 2s infinite;
 }
 
-.cert-badge.oscp {
-  background: rgba(255, 0, 60, 0.2);
-  border: 2px solid var(--hacker-red);
-}
-
 .cert-badge.oscp::before {
   background: rgba(255, 0, 60, 0.4);
 }
 
-.cert-badge.reverse {
-  background: rgba(0, 255, 157, 0.2);
-  border: 2px solid var(--neon-cyan);
-}
-
 .cert-badge.reverse::before {
   background: rgba(0, 255, 157, 0.4);
-}
-
-.cert-content h3 {
-  color: var(--neon-cyan);
-  margin-bottom: 0.5rem;
-}
-
-.cert-meta {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.cert-meta span {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.cert-skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.cert-skills span {
-  padding: 0.3rem 0.8rem;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--matrix-green);
-  border-radius: 20px;
-  font-size: 0.8rem;
 }
 
 /* ===== BIO CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
