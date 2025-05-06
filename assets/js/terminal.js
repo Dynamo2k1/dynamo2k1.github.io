@@ -1,31 +1,33 @@
+// Cyber Terminal Loader
 document.addEventListener('DOMContentLoaded', function() {
   const terminalLoader = document.querySelector('.terminal-loader');
   const terminalContent = document.querySelector('.terminal-content');
-
+  
+  // Boot sequence messages
   const bootMessages = [
     "Initializing cyber security protocols...",
     "Loading 0xDEFCON modules...",
     "Mounting encrypted partitions...",
     "Establishing secure connection...",
-    "ACCEPTED..."
+    "Verifying PGP keys...",
+    "Scanning for intrusions...",
+    "System fully operational"
   ];
-
-  function typeWriter(text, index, lineElement, callback) {
+  
+  // Simulate system boot
+  function typeWriter(text, index, callback) {
     if (index < text.length) {
-      lineElement.textContent = lineElement.textContent + text.charAt(index);
-      setTimeout(() => typeWriter(text, index + 1, lineElement, callback), 10);
+      terminalContent.innerHTML += text.charAt(index);
+      setTimeout(() => typeWriter(text, index + 1, callback), 20);
     } else {
-      setTimeout(callback, 10);
+      setTimeout(callback, 500);
     }
   }
-
+  
   function displayMessages(messages, index) {
     if (index < messages.length) {
-      const line = document.createElement('p');
-      line.textContent = ' ';  
-      terminalContent.appendChild(line);
-
-      typeWriter(messages[index], 0, line, () => {
+      terminalContent.innerHTML += `<p>> `;
+      typeWriter(messages[index], 0, () => {
         terminalContent.scrollTop = terminalContent.scrollHeight;
         displayMessages(messages, index + 1);
       });
@@ -34,25 +36,25 @@ document.addEventListener('DOMContentLoaded', function() {
         terminalLoader.style.opacity = '0';
         setTimeout(() => {
           terminalLoader.style.display = 'none';
-        }, 500);
-      }, 500);
+        }, 1000);
+      }, 1000);
     }
   }
-
+  
   // Start the boot sequence
   displayMessages(bootMessages, 0);
-
-  // Blinking cursor effect on the last line
+  
+  // Add blinking cursor effect
   setInterval(() => {
     const lastLine = terminalContent.lastElementChild;
     if (lastLine) {
-      let cursor = lastLine.querySelector('.blinking-cursor');
-      if (cursor) {
-        cursor.remove();
+      const cursor = document.createElement('span');
+      cursor.className = 'blinking-cursor';
+      cursor.textContent = '_';
+      
+      if (lastLine.querySelector('.blinking-cursor')) {
+        lastLine.removeChild(lastLine.querySelector('.blinking-cursor'));
       } else {
-        cursor = document.createElement('span');
-        cursor.className = 'blinking-cursor';
-        cursor.textContent = '_';
         lastLine.appendChild(cursor);
       }
     }

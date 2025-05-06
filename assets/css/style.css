@@ -1,246 +1,44 @@
-@import url('./components/animations.css');
-@import url('./components/cards.css');
-@import url('./components/terminal.css');
-@import url('./components/projects.css');
-@import url('./components/certifications.css');
-@import url('./components/contact.css');
-@import url('./components/about.css');
-
-
-/* Main Cyber Theme */
+/* Base Cyberpunk Theme */
 :root {
-  /* Core Cyber Colors */
   --matrix-green: #20c20e;
-  --terminal-bg: #0a0a0a;
-  --terminal-text: #00ff00;
-  --terminal-border: #003300;
-  --hacker-red: #ff0033;
-  --cyber-red: #ff003c;
+  --neon-cyan: #00ff9d;
+  --hacker-red: #ff003c;
   --cyber-purple: #bc13fe;
-  --cyber-blue: #0066ff;
+  --terminal-bg: #0a0a0a;
   --cyber-yellow: #f5d90a;
-  --networking-green: #00ffaa;
-  --forensics-yellow: #cccc00;
-  --malware-purple: #800080;
-  --social-orange: #ff6600;
-  --neon-cyan: #00f0ff;
-  
-  /* UI Elements */
   --dark-layer: rgba(0, 20, 0, 0.3);
-  --cyber-box-shadow: 0 0 15px rgba(32, 194, 14, 0.5);
-  --cyber-gradient: linear-gradient(90deg, 
-    rgba(255, 0, 60, 0) 0%, 
-    rgba(255, 0, 60, 0.3) 50%, 
-    rgba(255, 0, 60, 0) 100%); 
+  --cyber-gradient: linear-gradient(45deg, var(--matrix-green), var(--neon-cyan));
+  --cyber-box-shadow: 0 0 15px rgba(32, 194, 14, 0.7);
+}
+
+@font-face {
+  font-family: 'Cyberway';
+  src: url('../assets/fonts/Cyberway.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MonospaceBold';
+  src: url('../assets/fonts/MonospaceBold.ttf') format('truetype');
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--terminal-bg);
   color: var(--matrix-green);
   font-family: 'Share Tech Mono', monospace;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
   line-height: 1.6;
-}
-
-/* Custom cursor container */
-/* ===== Cursor Core Styles ===== */
-body, html {
-  cursor: none;
-}
-
-/* === Custom cursor container === */
-.custom-cursor {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-  transition: all 0.15s ease;
-}
-
-/* === Outer circle === */
-.cursor-outer {
-  border: 2px solid var(--matrix-green);
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  border-radius: 50%;
-  animation: cursorPulse 2s infinite;
-  transition: all 0.2s ease;
-}
-
-/* === Inner circle === */
-.cursor-inner {
-  width: 6px;
-  height: 6px;
-  background-color: var(--cyber-red);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.2s ease;
-}
-
-/* === Cursor Pulse Animation === */
-@keyframes cursorPulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* === Click effect === */
-.custom-cursor.clicking .cursor-inner {
-  transform: translate(-50%, -50%) scale(0.5);
-  background-color: var(--matrix-green);
-}
-
-/* === Hover effect === */
-.custom-cursor.hovering .cursor-outer {
-  transform: scale(1.5);
-  border-color: var(--cyber-red);
-}
-
-/* === Selecting text effect === */
-.custom-cursor.selecting .cursor-inner {
-  background-color: white;
-  width: 2px;
-  height: 14px;
-}
-
-.custom-cursor.selecting .cursor-outer {
-  border-color: white;
-  transform: scale(1.2);
-}
-
-/* === Link and button hover effect (custom icon cursor) === */
-a:hover, button:hover, .clickable:hover {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2320c20e" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>') 12 12, pointer;
-}
-
-/* === Text selection highlight effect === */
-::selection {
-  background: var(--matrix-green);
-  color: black;
-  text-shadow: none;
-}
-
-/* === Terminal-style elements use different cursor shape === */
-.terminal-content, .terminal-header, .skill-category {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" fill="none" stroke="%2320c20e" stroke-width="2"/><line x1="4" y1="4" x2="20" y2="20" stroke="%2320c20e" stroke-width="1"/><line x1="20" y1="4" x2="4" y2="20" stroke="%2320c20e" stroke-width="1"/></svg>') 12 12, text;
-}
-
-/* Header Setting */
-
-/* target the H1 in your header */
-.cyber-header h1 {
-  font-family: 'Cyberway', sans-serif;
-  font-size: 5rem;           /* ↑ bump this up as needed */
-  color: var(--cyber-red);
-  text-shadow: 0 0 15px var(--cyber-red);
-  margin: 3rem 0;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  overflow-x: hidden;
+  min-height: 100vh;
   position: relative;
-  display: inline-block;
 }
 
-/* keep your existing ::after underline if you like */
-.cyber-header h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--matrix-green);
-  box-shadow: 0 0 15px var(--matrix-green);
-}
-
-
-
-
-/* Container Setting */
-.container {
-  position: relative;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 20px;
-  z-index: 1;
-}
-
-.container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    linear-gradient(45deg, transparent 49%, var(--cyber-red) 50%, transparent 51%),
-    linear-gradient(-45deg, transparent 49%, var(--cyber-blue) 50%, transparent 51%);
-  background-size: 20px 20px;
-  opacity: 0.05;
-  pointer-events: none;
-  animation: hologram 10s linear infinite;
-  z-index: -1;
-}
-
-
-
-/* HEADINGS  */
-.cyber-main h1 {
-  font-family: 'Cyberway', sans-serif;
-  font-size: 3.5rem;
-  color: var(--cyber-red);
-  text-shadow: 0 0 15px var(--cyber-red);
-  margin: 3rem 0;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-}
-
-.cyber-main h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--matrix-green);
-  box-shadow: 0 0 15px var(--matrix-green);
-}
-
-.cyber-main h2 {
-  font-family: 'Cyberway', sans-serif;
-  font-size: 2.5rem;
-  color: var(--cyber-blue);
-  text-shadow: 0 0 10px var(--cyber-blue);
-  margin: 1.5rem 0;
-  letter-spacing: 2px;
-}
-
-.cyber-main h3 {
-  font-family: 'MonoSpaceBold', monospace;
-  font-size: 1.8rem;
-  color: var(--cyber-purple);
-  margin: 1.2rem 0;
-}
-
-.cyber-main h4 {
-  font-family: 'MonoSpaceBold', monospace;
-  font-size: 1.4rem;
-  color: var(--neon-cyan);
-  margin: 1rem 0;
-}
-
-/* Matrix Background */
+/* Background Effects */
 #matrix {
   position: fixed;
   top: 0;
@@ -251,294 +49,74 @@ a:hover, button:hover, .clickable:hover {
   opacity: 0.15;
 }
 
-/* Terminal Loader */
-.terminal-loader {
+#particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: opacity 1s ease-out;
+  z-index: -1;
 }
 
-.terminal-header {
-  width: 80%;
-  max-width: 600px;
-  background-color: #001100;
-  border: 1px solid var(--matrix-green);
-  padding: 10px;
-  box-shadow: 0 0 15px var(--matrix-green);
+/* Import Components */
+@import url('components/animations.css');
+@import url('components/cards.css');
+@import url('components/navigation.css');
+@import url('components/terminal.css');
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.terminal-content {
-  width: 80%;
-  max-width: 600px;
-  height: 200px;
-  background-color: #000;
-  border: 1px solid var(--matrix-green);
-  padding: 20px;
-  overflow-y: auto;
-  font-family: 'Courier New', monospace;
+/* Cyber Header */
+.cyber-header {
+  border-bottom: 3px solid var(--matrix-green);
+  box-shadow: var(--cyber-box-shadow);
+  padding: 1rem 0;
+  position: relative;
+  background: rgba(0, 10, 0, 0.8);
+  backdrop-filter: blur(5px);
 }
 
-/* Glitch Effect */
+.glitch-container {
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
 .glitch {
   position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
   font-family: 'Cyberway', sans-serif;
-  font-size: 3rem;
   color: var(--matrix-green);
   text-shadow: 0 0 10px var(--matrix-green);
-  animation: glitch 2s infinite;
+  animation: glitch 3s infinite;
 }
 
-.glitch::before, .glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.cyber-subtitle {
+  font-family: 'MonospaceBold', monospace;
+  color: var(--neon-cyan);
+  margin-top: -1rem;
+  letter-spacing: 3px;
 }
 
-.glitch::before {
-  left: 2px;
-  text-shadow: -2px 0 var(--cyber-red);
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.glitch::after {
-  left: -2px;
-  text-shadow: -2px 0 var(--cyber-blue);
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim2 5s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-  0% { clip: rect(31px, 9999px, 94px, 0); }
-  10% { clip: rect(112px, 9999px, 76px, 0); }
-  20% { clip: rect(85px, 9999px, 77px, 0); }
-  30% { clip: rect(27px, 9999px, 97px, 0); }
-  40% { clip: rect(64px, 9999px, 98px, 0); }
-  50% { clip: rect(61px, 9999px, 85px, 0); }
-  60% { clip: rect(99px, 9999px, 114px, 0); }
-  70% { clip: rect(34px, 9999px, 115px, 0); }
-  80% { clip: rect(98px, 9999px, 129px, 0); }
-  90% { clip: rect(43px, 9999px, 96px, 0); }
-  100% { clip: rect(82px, 9999px, 64px, 0); }
-}
-
-/* Bio Card */
-.bio-card {
-  display: flex;
-  background: rgba(0, 20, 0, 0.3);
-  border: 1px solid var(--matrix-green);
-  padding: 20px;
-  margin: 20px 0;
-  backdrop-filter: blur(5px);
-  position: relative;
-}
-
-.bio-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--matrix-green);
-  box-shadow: 0 0 10px var(--matrix-green);
-  animation: scanline 6s linear infinite;
-}
-
-.bio-image {
-  width: 250px;
-  height: 250px;
-  border: 2px solid var(--matrix-green);
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 20px;
-  position: relative;
-}
-
-.bio-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* cover ensures the image fills the container */
-  display: block;
-  border-radius: 50%; /* optional, makes sure image edges are rounded */
-}
-.status-indicator {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 15px;
-  height: 15px;
-  background-color: #00ff00;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #00ff00;
-  animation: pulse 2s infinite;
-}
-
-/* ul styling*/
-.cyber-nav ul {
-  list-style: none;          /* Remove bullet points */
-  margin: 0;                 /* Remove default margin */
-  padding: 0;                /* Remove default padding */
-  display: flex;             /* Arrange list items horizontally */
-  justify-content: flex-end; /* Align items to the right */
-  align-items: center;       /* Vertically center items */
-}
-
-.cyber-nav {
-  position: absolute;        /* Position relative to nearest positioned ancestor */
-  top: 40px;                   /* Align to top */
-  right: 5px;                 /* Align to right */
-  width: auto;              /* Adjust width as needed */
-  padding: 10px 20px;       /* Optional padding for spacing */
-}
-
-.cyber-nav ul li {
-  margin-left: 20px;         /* Space between menu items */
-}
-
-.cyber-nav ul li a {
-  text-decoration: none;     /* Remove underline */
-  color: inherit;            /* Use inherited text color */
-  display: flex;             /* For icon and text alignment */
-  align-items: center;
-}
-
-.cyber-nav ul li a i {
-  background-color: #00ff00;   /* Example: neon green background */
-  color: #000;                 /* Icon color inside the circle */
-  border-radius: 50%;          /* Make it circular */
-  padding: 6px;                /* Space inside the circle */
-  margin-right: 8px;           /* Space between icon and text */
-  font-size: 14px;             /* Adjust icon size */
-  display: inline-flex;        /* Make sure padding works properly */
-  align-items: center;
-  justify-content: center;
-  width: 28px;                 /* Fixed width and height for circle */
-  height: 28px;
-  box-shadow: 0 0 8px #48ff00; /* Optional: glowing effect */
-  transition: background-color 0.3s ease;
-}
-
-.cyber-nav ul li a:hover i {
-  background-color: #234723;   /* Darker green on hover */
-  box-shadow: 0 0 12px #326b32;
-}
-
-
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin: 20px 0;
-}
-
-.skill-category {
-  background: rgba(0, 30, 0, 0.2);
-  border: 1px solid var(--matrix-green);
-  padding: 15px;
-}
-
-.skill-category h4 {
-  color: var(--cyber-purple);
-  border-bottom: 1px dashed var(--matrix-green);
-  padding-bottom: 5px;
-}
-
-.skill-category ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.skill-category li {
-  padding: 5px 0;
-  position: relative;
-  padding-left: 25px;
-}
-
-.skill-category li::before {
-  content: '>';
-  position: absolute;
-  left: 0;
-  color: var(--matrix-green);
-}
-
-/* GitHub Terminal */
-.terminal-box {
-  background: #000;
-  border: 1px solid var(--matrix-green);
-  margin: 20px 0;
-}
-
-.terminal-header {
-  background: #001100;
-  padding: 5px 10px;
-  border-bottom: 1px solid var(--matrix-green);
-  display: flex;
-  justify-content: space-between;
-}
-
-.terminal-content {
-  padding: 15px;
-  height: 200px;
-  overflow-y: auto;
-  font-family: 'Courier New', monospace;
-}
-
-/* Animations */
-@keyframes scanline {
-  0% { top: 0; }
-  100% { top: 100%; }
-}
-
-@keyframes pulse {
-  0% { opacity: 0.5; }
-  50% { opacity: 1; }
-  100% { opacity: 0.5; }
-}
-
-/* Responsive Design */
-@media (max-width: 760px) {
-  .bio-card {
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  .bio-image {
-      margin-right: 0;
-      margin-bottom: 20px;
-  }
+/* Main Content */
+.cyber-main {
+  padding: 2rem 0;
+  min-height: 70vh;
 }
 
 /* Footer */
-/* ===== Cyber Footer Styles ===== */
 .cyber-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(to top, rgba(10, 20, 10, 0.9), rgba(0, 0, 0, 0.7));
-  backdrop-filter: blur(5px);
   border-top: 1px solid var(--matrix-green);
-  box-shadow: 0 -5px 20px rgba(32, 194, 14, 0.3);
-  padding: 15px 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
 }
 
 .cyber-footer::before {
@@ -548,119 +126,45 @@ a:hover, button:hover, .clickable:hover {
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    var(--matrix-green), 
-    transparent);
-  box-shadow: 0 0 10px var(--matrix-green);
-  animation: scanline 3s linear infinite;
+  background: var(--cyber-gradient);
+  animation: scanline 6s linear infinite;
 }
 
 .social-links {
   display: flex;
-  gap: 25px;
-  margin-bottom: 15px;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .social-links a {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(0, 20, 0, 0.3);
-  border: 1px solid var(--matrix-green);
   color: var(--matrix-green);
-  font-size: 18px;
-  transition: all 0.3s ease;
-  text-decoration: none;
+  font-size: 1.5rem;
+  transition: all 0.3s;
 }
 
 .social-links a:hover {
-  background: var(--matrix-green);
-  color: black;
-  box-shadow: 0 0 15px var(--matrix-green);
+  color: var(--neon-cyan);
   transform: translateY(-3px);
-}
-
-.social-links a::after {
-  content: attr(aria-label);
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 20, 0, 0.8);
-  color: var(--matrix-green);
-  padding: 3px 8px;
-  border-radius: 3px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-}
-
-.social-links a:hover::after {
-  opacity: 1;
+  text-shadow: 0 0 10px var(--neon-cyan);
 }
 
 .copyright {
-  color: var(--terminal-text);
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 14px;
-  margin-top: 10px;
-  text-shadow: 0 0 5px var(--matrix-green);
-  position: relative;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
-.copyright::before {
-  content: '>> ';
-  color: var(--cyber-red);
-}
-
-.copyright::after {
-  content: ' <<';
-  color: var(--cyber-red);
-}
-
-/* Animated border effect */
-.cyber-footer::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    var(--cyber-red),
-    var(--cyber-blue),
-    var(--cyber-purple),
-    var(--neon-cyan),
-    var(--cyber-red));
-  background-size: 200% 100%;
-  animation: gradientFlow 8s linear infinite;
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
-}
-
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .social-links {
-    gap: 15px;
+  .glitch {
+    font-size: 2.5rem;
   }
   
-  .social-links a {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
+  .cyber-subtitle {
+    font-size: 1rem;
   }
   
-  .copyright {
-    font-size: 12px;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
