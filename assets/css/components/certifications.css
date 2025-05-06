@@ -42,6 +42,13 @@
     box-shadow: 0 0 15px var(--cyber-red);
     font-size: 0.8rem;
     font-family: 'MonoSpaceBold', monospace;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .cert-card:hover .cert-badge {
+    opacity: 1;
   }
   
   .credential-id {
