@@ -78,7 +78,7 @@
     border: 1px solid var(--matrix-green);
     color: var(--matrix-green);
     font-family: 'Share Tech Mono', monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
     width: 100%;
@@ -98,7 +98,7 @@
     border: 1px solid var(--matrix-green);
     color: var(--matrix-green);
     font-family: 'Share Tech Mono', monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
     width: 100%;

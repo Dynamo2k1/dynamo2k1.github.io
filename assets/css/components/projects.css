@@ -94,25 +94,6 @@
     margin-top: 1.5rem;
   }
   
-  .cyber-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.5rem;
-    background: rgba(32, 194, 14, 0.1);
-    border: 1px solid var(--matrix-green);
-    color: var(--matrix-green);
-    text-decoration: none;
-    transition: all 0.3s;
-    font-family: 'Share Tech Mono', monospace;
-    cursor: pointer;
-  }
-  
-  .cyber-button:hover {
-    background: rgba(32, 194, 14, 0.3);
-    box-shadow: 0 0 15px var(--matrix-green);
-    transform: translateY(-2px);
-  }
   
   /* ===== RESPONSIVE ADJUSTMENTS ===== */
   @media (max-width: 992px) {
