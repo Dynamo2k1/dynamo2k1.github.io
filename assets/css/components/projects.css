@@ -18,10 +18,10 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, 
+    /* background: linear-gradient(45deg, 
       var(--cyber-red), 
       var(--matrix-green), 
-      var(--cyber-blue));
+      var(--cyber-blue)); */
     z-index: -1;
     animation: gradient-border 3s ease infinite;
     background-size: 200% 200%;

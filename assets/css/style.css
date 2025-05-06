@@ -14,10 +14,15 @@
   --terminal-bg: #0a0a0a;
   --terminal-text: #00ff00;
   --terminal-border: #003300;
+  --hacker-red: #ff0033;
   --cyber-red: #ff003c;
-  --cyber-blue: #0066ff;
   --cyber-purple: #bc13fe;
+  --cyber-blue: #0066ff;
   --cyber-yellow: #f5d90a;
+  --networking-green: #00ffaa;
+  --forensics-yellow: #cccc00;
+  --malware-purple: #800080;
+  --social-orange: #ff6600;
   --neon-cyan: #00f0ff;
   
   /* UI Elements */
