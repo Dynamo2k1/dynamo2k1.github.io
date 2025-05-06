@@ -46,6 +46,19 @@
 
 
 /* === tags === */
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+} 
+
+.cyber-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
 .tag {
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
