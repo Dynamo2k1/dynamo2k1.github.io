@@ -131,7 +131,7 @@ a:hover, button:hover, .clickable:hover {
 }
 
 /* === Terminal-style elements use different cursor shape === */
-.terminal-content, .terminal-header, .skill-category {
+.terminal-content, .terminal-header, .terminal-content-jpg, .terminal-header-jpg, .skill-category {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" fill="none" stroke="%2320c20e" stroke-width="2"/><line x1="4" y1="4" x2="20" y2="20" stroke="%2320c20e" stroke-width="1"/><line x1="20" y1="4" x2="4" y2="20" stroke="%2320c20e" stroke-width="1"/></svg>') 12 12, text;
 }
 
@@ -278,6 +278,26 @@ a:hover, button:hover, .clickable:hover {
 
 .terminal-content {
   width: 80%;
+  max-width: 600px;
+  height: 200px;
+  background-color: #000;
+  border: 1px solid var(--matrix-green);
+  padding: 20px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-header {
+  width: 100;
+  max-width: 600px;
+  background-color: #001100;
+  border: 1px solid var(--matrix-green);
+  padding: 10px;
+  box-shadow: 0 0 15px var(--matrix-green);
+}
+
+.terminal-content {
+  width: 100;
   max-width: 600px;
   height: 200px;
   background-color: #000;
@@ -491,6 +511,21 @@ a:hover, button:hover, .clickable:hover {
 }
 
 .terminal-content {
+  padding: 15px;
+  height: 200px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-header-jpg {
+  background: #001100;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--matrix-green);
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminal-content-jpg {
   padding: 15px;
   height: 200px;
   overflow-y: auto;
