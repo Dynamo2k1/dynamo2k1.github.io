@@ -37,7 +37,8 @@
   align-items: center;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dashed var(--matrix-green);
+  border-top: 2px dashed var(--matrix-green);;
+  border-bottom: 1px dashed var(--neon-cyan);
 }
 
 .project-tags {
