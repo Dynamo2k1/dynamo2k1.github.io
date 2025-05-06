@@ -35,9 +35,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-top: 2px dashed var(--matrix-green);;
+  border-top: 2px solid var(--matrix-green);;
   border-bottom: 1px dashed var(--neon-cyan);
 }
 
