@@ -1,4 +1,4 @@
-/* ===== CORE CARD STYLES ===== */
+/* ===== CORE CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
 .cyber-card {
   background: var(--dark-layer);
   border: 1px solid var(--matrix-green);
@@ -27,73 +27,25 @@
   animation: scan 6s infinite linear;
 }
 
-/* ===== PROJECT CARDS ===== */
-.project-card {
-  background: rgba(0, 30, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px dashed var(--matrix-green);
-}
-
-.project-content {
-  display: flex;
-  gap: 2rem;
-}
-
-.project-image {
-  flex: 1;
-  min-width: 300px;
-  border: 1px solid var(--matrix-green);
-  padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project-details {
-  flex: 2;
-}
-
-.project-details h4 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 1.5rem 0 1rem;
-  color: var(--neon-cyan);
-}
-
-.project-details ul {
-  list-style-type: none;
-  padding-left: 1.5rem;
-}
-
-.project-details li {
-  position: relative;
-  margin-bottom: 0.8rem;
-}
-
-.project-details li::before {
-  content: '>';
+/* ===== PROJECT CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
+.project-card::after {
+  content: '';
   position: absolute;
-  left: -1.5rem;
-  color: var(--matrix-green);
-  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(32, 194, 14, 0.1) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(32, 194, 14, 0.1) 100%
+  );
+  pointer-events: none;
 }
 
-/* ===== TAGS ===== */
+
+/* === tags === */
 .tag {
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
@@ -148,25 +100,9 @@
   color: var(--cyber-purple);
 }
 
-/* ===== TECH STACK ===== */
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
 
-.tech-stack span {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--matrix-green);
-  border-radius: 5px;
-}
+/* Cert */
 
-/* ===== CERTIFICATION CARDS ===== */
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -216,12 +152,20 @@
 
 .cert-badge.oscp {
   background: rgba(255, 0, 60, 0.2);
-  border: 2px solid var(--cyber-red);
+  border: 2px solid var(--hacker-red);
+}
+
+.cert-badge.oscp::before {
+  background: rgba(255, 0, 60, 0.4);
 }
 
 .cert-badge.reverse {
   background: rgba(0, 255, 157, 0.2);
   border: 2px solid var(--neon-cyan);
+}
+
+.cert-badge.reverse::before {
+  background: rgba(0, 255, 157, 0.4);
 }
 
 .cert-content h3 {
@@ -252,72 +196,28 @@
   margin-top: 1rem;
 }
 
-/* ===== BIO CARD ===== */
-.bio-card {
-  display: flex;
-  gap: 2rem;
-  margin: 2rem 0;
-  position: relative;
-  overflow: hidden;
+.cert-skills span {
+  padding: 0.3rem 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--matrix-green);
+  border-radius: 20px;
+  font-size: 0.8rem;
 }
 
-.bio-image {
-  width: 200px;
-  height: 200px;
-  border: 3px solid var(--matrix-green);
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.bio-image img {
+/* ===== BIO CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
+.bio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background: var(--cyber-gradient);
+  opacity: 0.1;
+  animation: scan 6s infinite linear;
 }
 
-.status-indicator {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 15px;
-  height: 15px;
-  background-color: var(--matrix-green);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--matrix-green);
-  animation: pulse 2s infinite;
-}
-
-.bio-content h3 {
-  color: var(--neon-cyan);
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.bio-content p {
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.bio-content p::before {
-  content: '>';
-  position: absolute;
-  left: 0;
-  color: var(--matrix-green);
-}
-
-/* ===== TIMELINE ===== */
-.timeline {
-  border-left: 3px solid var(--matrix-green);
-  padding-left: 2rem;
-  margin: 2rem 0;
-  position: relative;
-}
-
+/* ===== TIMELINE STYLES (UNIQUE TO CARDS.CSS) ===== */
 .timeline::before {
   content: '';
   position: absolute;
@@ -329,59 +229,14 @@
   animation: scanline 6s linear infinite;
 }
 
-.timeline-item {
-  position: relative;
-  padding: 1rem;
-  margin: 1rem 0;
-  background: rgba(0, 0, 0, 0.3);
+/* ===== CONTACT CARD STYLES (UNIQUE TO CARDS.CSS) ===== */
+.contact-card {
+  background: var(--dark-layer);
   border: 1px solid var(--matrix-green);
+  padding: 2rem;
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -2.35rem;
-  top: 1.5rem;
-  width: 15px;
-  height: 15px;
-  background: var(--matrix-green);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--matrix-green);
-}
-
-.timeline-item h3 {
-  color: var(--neon-cyan);
-  margin-bottom: 0.5rem;
-}
-
-.timeline-content ul {
-  list-style-type: none;
-  margin-left: 1.5rem;
-}
-
-.timeline-content li {
-  position: relative;
-  margin-bottom: 0.3rem;
-}
-
-.timeline-content li::before {
-  content: '>';
-  position: absolute;
-  left: -1.5rem;
-  color: var(--matrix-green);
-}
-
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
-@media (max-width: 992px) {
-  .project-content {
-    flex-direction: column;
-  }
-  
-  .project-image {
-    min-width: auto;
-  }
-}
-
+/* ===== RESPONSIVE ADJUSTMENTS (UNIQUE TO CARDS.CSS) ===== */
 @media (max-width: 768px) {
   .bio-card {
     flex-direction: column;
