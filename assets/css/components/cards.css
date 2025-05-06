@@ -50,8 +50,9 @@
 
 /* ===== CERTIFICATION CARDS ===== */
 .cert-card {
-  border: 1px solid var(--cyber-purple);
+  border: 1px solid var(--matrix-green);
   text-align: center;
+  padding: 15px;
 }
 
 .cert-badge {
