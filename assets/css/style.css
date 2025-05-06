@@ -615,10 +615,6 @@ a:hover, button:hover, .clickable:hover {
   100% { background-position: 200% 50%; }
 }
 
-@keyframes scanline {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
