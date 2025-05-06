@@ -119,7 +119,7 @@
   color: var(--cyber-purple);
 }
 
-.tag.networking {
+.tag.network {
   background: rgba(0, 255, 170, 0.2);
   border: 1px solid var(--neon-cyan);
   color: var(--neon-cyan);
@@ -129,6 +129,23 @@
   background: rgba(255, 255, 0, 0.2);
   border: 1px solid var(--cyber-yellow);
   color: var(--cyber-yellow);
+}
+.tag.red {
+  background: rgba(255, 0, 60, 0.2);
+  border: 1px solid var(--hacker-red);
+  color: var(--hacker-red);
+}
+
+.tag.blue {
+  background: rgba(0, 102, 255, 0.2);
+  border: 1px solid var(--cyber-blue);
+  color: var(--cyber-blue);
+}
+
+.tag.purple {
+  background: rgba(188, 19, 254, 0.2);
+  border: 1px solid var(--cyber-purple);
+  color: var(--cyber-purple);
 }
 
 /* ===== TECH STACK ===== */
