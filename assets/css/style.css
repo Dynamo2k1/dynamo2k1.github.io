@@ -1,3 +1,13 @@
+@import url('components/_animations.css');
+@import url('components/_cards.css');
+@import url('components/_navigation.css');
+@import url('components/_terminal.css');
+@import url('components/_projects.css');
+@import url('components/_certifications.css');
+@import url('components/_contact.css');
+@import url('components/_about.css');
+
+
 /* Main Cyber Theme */
 :root {
   /* Core Cyber Colors */
@@ -632,12 +642,3 @@ a:hover, button:hover, .clickable:hover {
     font-size: 12px;
   }
 }
-
-@import url('components/_animations.css');
-@import url('components/_cards.css');
-@import url('components/_navigation.css');
-@import url('components/_terminal.css');
-@import url('components/_projects.css');
-@import url('components/_certifications.css');
-@import url('components/_contact.css');
-@import url('components/_about.css');
