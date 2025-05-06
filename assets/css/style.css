@@ -162,10 +162,10 @@ a:hover, button:hover, .clickable:hover {
 /* HEADINGS  */
 .cyber-main h1 {
   font-family: 'Cyberway', sans-serif;
-  font-size: 3.5rem;
+  font-size: 6rem;
   color: var(--cyber-red);
   text-shadow: 0 0 15px var(--cyber-red);
-  margin: 2rem 0;
+  margin: 3rem 0;
   letter-spacing: 3px;
   text-transform: uppercase;
   position: relative;
@@ -178,7 +178,7 @@ a:hover, button:hover, .clickable:hover {
   bottom: -10px;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: var(--matrix-green);
   box-shadow: 0 0 15px var(--matrix-green);
 }
