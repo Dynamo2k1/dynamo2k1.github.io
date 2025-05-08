@@ -10,20 +10,21 @@
 /* Main Cyber Theme */
 :root {
   /* Core Cyber Colors */
-  --matrix-green: #228B22; /* Dark Forest Green */
-  --terminal-bg: #000000; /* True Black */
-  --terminal-text: #39FF14; /* Hacker Neon Green */
-  --terminal-border: #1A1A1A; /* Dim Gray-Black */
-  --hacker-red: #8B0000; /* Dark Red */
-  --cyber-red: #B22222; /* Firebrick */
-  --cyber-purple: #4B0082; /* Indigo */
-  --cyber-blue: #003366; /* Midnight Blue */
-  --cyber-yellow: #8B8000; /* Dark Gold */
-  --networking-green: #006400; /* Dark Green */
-  --forensics-yellow: #666600; /* Olive Drab */
-  --malware-purple: #2E0854; /* Deep Purple */
-  --social-orange: #8B4500; /* Dark Orange */
-  --neon-cyan: #008B8B; /* Dark Cyan */
+  --matrix-green: #1f1f1f; /* Shadow Grey */
+  --terminal-bg: #121212; /* Deep Obsidian */
+  --terminal-text: #e60073; /* Glitch Magenta */
+  --terminal-border: #2a2a2a; /* Smoky Grey */
+  --hacker-red: #5c0000; /* Blood Maroon */
+  --cyber-red: #a10044; /* Infrared Pink */
+  --cyber-purple: #3f004f; /* Toxic Plum */
+  --cyber-blue: #011f4b; /* Dark Midnight Blue */
+  --cyber-yellow: #a67c00; /* Tarnished Gold */
+  --networking-green: #003322; /* Shadowy Teal Green */
+  --forensics-yellow: #4d4d00; /* Military Olive */
+  --malware-purple: #1a001a; /* Black Amethyst */
+  --social-orange: #662200; /* Burnt Ember */
+  --neon-cyan: #00575f; /* Deep Digital Cyan */
+
 
   
   /* UI Elements */
