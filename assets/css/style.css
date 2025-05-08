@@ -10,23 +10,20 @@
 /* Main Cyber Theme */
 :root {
   /* Core Cyber Colors */
-  :root {
-    --matrix-green: #8A2BE2; /* Blue Violet */
-    --terminal-bg: #7CFC00; /* Lawn Green */
-    --terminal-text: #FF4500; /* Orange Red */
-    --terminal-border: #00FFFF; /* Cyan */
-    --hacker-red: #FF007F; /* Hot Pink */
-    --cyber-red: #32CD32; /* Lime Green */
-    --cyber-purple: #1E90FF; /* Dodger Blue */
-    --cyber-blue: #FFD700; /* Gold */
-    --cyber-yellow: #FF1493; /* Deep Pink */
-    --networking-green: #FFFF00; /* Yellow */
-    --forensics-yellow: #111111; /* Dark Gray */
-    --malware-purple: #333333; /* Darker Gray */
-    --social-orange: #8A2BE2; /* Blue Violet */
-    --neon-cyan: #FFFF00; /* Yellow */
-  }
-  
+  --matrix-green: #FFFF00; /* Yellow */
+  --terminal-bg: #111111; /* Dark Gray */
+  --terminal-text: #FF007F; /* Hot Pink */
+  --terminal-border: #FF4500; /* Orange Red */
+  --hacker-red: #FF1493; /* Deep Pink */
+  --cyber-red: #1E90FF; /* Dodger Blue */
+  --cyber-purple: #8A2BE2; /* Blue Violet */
+  --cyber-blue: #32CD32; /* Lime Green */
+  --cyber-yellow: #7CFC00; /* Lawn Green */
+  --networking-green: #00FFFF; /* Cyan */
+  --forensics-yellow: #333333; /* Darker Gray */
+  --malware-purple: #FFD700; /* Gold */
+  --social-orange: #FF007F; /* Hot Pink */
+  --neon-cyan: #FF1493; /* Deep Pink */
 
   
   /* UI Elements */
