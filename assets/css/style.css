@@ -11,7 +11,7 @@
 :root {
   /* Core Cyber Colors */
   --matrix-green: #0ab00a; /* Vibrant Lime Green */
-  --terminal-bg: #302f2f; /* Rich Black */
+  --terminal-bg: #000000; /* Rich Black */
   --terminal-text: #0ab00a; /* Vibrant Lime Green */
   --terminal-border: #012101; /* Dark Green */
   --hacker-red: #8d0621; /* Bright Red */
