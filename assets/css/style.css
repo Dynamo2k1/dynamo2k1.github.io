@@ -10,20 +10,20 @@
 /* Main Cyber Theme */
 :root {
   /* Core Cyber Colors */
-  --matrix-green: #00FF00; /* Vibrant Lime Green */
-  --terminal-bg: #0A0A0A; /* Rich Black */
-  --terminal-text: #00FF00; /* Vibrant Lime Green */
-  --terminal-border: #003300; /* Dark Green */
-  --hacker-red: #FF0033; /* Bright Red */
-  --cyber-red: #FF003C; /* Vivid Red */
-  --cyber-purple: #BC13FE; /* Electric Purple */
-  --cyber-blue: #0066FF; /* Bright Blue */
-  --cyber-yellow: #F5D90A; /* Neon Yellow */
-  --networking-green: #00FF00; /* Vibrant Lime Green */
-  --forensics-yellow: #CCCC00; /* Muted Yellow */
-  --malware-purple: #800080; /* Classic Purple */
-  --social-orange: #FF6600; /* Bright Orange */
-  --neon-cyan: #00F0FF; /* Neon Cyan */
+  --matrix-green: #228B22; /* Dark Forest Green */
+  --terminal-bg: #000000; /* True Black */
+  --terminal-text: #39FF14; /* Hacker Neon Green */
+  --terminal-border: #1A1A1A; /* Dim Gray-Black */
+  --hacker-red: #8B0000; /* Dark Red */
+  --cyber-red: #B22222; /* Firebrick */
+  --cyber-purple: #4B0082; /* Indigo */
+  --cyber-blue: #003366; /* Midnight Blue */
+  --cyber-yellow: #8B8000; /* Dark Gold */
+  --networking-green: #006400; /* Dark Green */
+  --forensics-yellow: #666600; /* Olive Drab */
+  --malware-purple: #2E0854; /* Deep Purple */
+  --social-orange: #8B4500; /* Dark Orange */
+  --neon-cyan: #008B8B; /* Dark Cyan */
 
   
   /* UI Elements */
