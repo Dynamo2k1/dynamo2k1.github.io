@@ -11,12 +11,12 @@
 :root {
   /* Core Cyber Colors */
   --matrix-green: #FF1493; /* Deep Pink */
-  --terminal-bg: #1E90FF; /* Dodger Blue */
+  --terminal-bg: #FF4500; /* Dodger Blue */
   --terminal-text: #32CD32; /* Lime Green */
   --terminal-border: #FFD700; /* Gold */
   --hacker-red: #00FFFF; /* Cyan */
   --cyber-red: #8A2BE2; /* Blue Violet */
-  --cyber-purple: #FF4500; /* Orange Red */
+  --cyber-purple: #1E90FF; /* Orange Red */
   --cyber-blue: #FFFF00; /* Yellow */
   --cyber-yellow: #7CFC00; /* Lawn Green */
   --networking-green: #FF007F; /* Hot Pink */
