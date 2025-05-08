@@ -10,15 +10,15 @@
 /* Main Cyber Theme */
 :root {
   /* Core Cyber Colors */
-  --matrix-green: #00FF00; /* Neon Green */
-  --terminal-bg: #1E1E1E; /* Dark Gray */
-  --terminal-text: #00FF7F; /* Bright Green */
-  --terminal-border: #2A2A2A; /* Charcoal Gray */
-  --hacker-red: #FF003C; /* Vivid Red */
+  --matrix-green: #7CFC00; /* Lawn Green */
+  --terminal-bg: #111111; /* Dark Gray */
+  --terminal-text: #FFD700; /* Gold */
+  --terminal-border: #333333; /* Darker Gray */
+  --hacker-red: #FF1493; /* Deep Pink */
   --cyber-red: #FF007F; /* Hot Pink */
-  --cyber-purple: #9B30FF; /* Purple */
-  --cyber-blue: #00BFFF; /* Deep Sky Blue */
-  --cyber-yellow: #FFD700; /* Gold */
+  --cyber-purple: #8A2BE2; /* Blue Violet */
+  --cyber-blue: #1E90FF; /* Dodger Blue */
+  --cyber-yellow: #FFFF00; /* Yellow */
   --networking-green: #32CD32; /* Lime Green */
   --forensics-yellow: #FFFF00; /* Bright Yellow */
   --malware-purple: #8A2BE2; /* Blue Violet */
